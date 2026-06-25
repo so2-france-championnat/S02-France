@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Standoff Elite League</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">
+      🏆 <span>STANDOFF ELITE LEAGUE</span>
+    </div>
+
+    <nav>
+      <button onclick="showTab('classement')">Classement</button>
+      <button onclick="showTab('equipes')">Équipes</button>
+      <button onclick="showTab('matchs')">Matchs</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>COMPÉTITION OFFICIELLE COMMUNAUTAIRE</h1>
+    <p>Standoff 2 — Saison 1</p>
+  </section>
+
+  <main class="container">
+
+    <!-- CLASSEMENT -->
+    <section id="classement" class="tab active card">
+      <h2>🏆 Classement</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Équipe</th>
+            <th>Pts</th>
+            <th>V</th>
+            <th>D</th>
+          </tr>
+        </thead>
+        <tbody id="rankingTable"></tbody>
+      </table>
+    </section>
+
+    <!-- EQUIPES -->
+    <section id="equipes" class="tab card">
+      <h2>👥 Équipes</h2>
+      <div class="grid" id="teamsGrid"></div>
+    </section>
+
+    <!-- MATCHS -->
+    <section id="matchs" class="tab card">
+      <h2>⚔️ Matchs</h2>
+      <p class="empty">Aucun match programmé pour le moment.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    Projet communautaire non officiel lié à Standoff 2
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
