@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SO2 FR CHAMPIONNAT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header class="header">
+  <div class="brand">
+    <img src="logos/team1.jpg" class="logo">
+    <div class="title">SO2 FR CHAMPIONNAT</div>
+  </div>
+
+  <div class="live">● SAISON 1 CHP</div>
+</header>
+
+<!-- SOCIAL -->
+<div class="social">
+  <button class="discord" onclick="window.open('https://discord.gg/GZhXFxEMg')">Discord</button>
+  <button class="twitch" onclick="window.open('https://m.twitch.tv/so2francechampionnat/home')">Twitch</button>
+  <button class="youtube" onclick="window.open('https://m.youtube.com/channel/UCypbT6QGPC0oARGa3n1XbRQ?ra=m')">YouTube</button>
+</div>
+
+<nav class="nav">
+  <button onclick="show('home')">Accueil</button>
+  <button onclick="show('teams')">Équipes</button>
+  <button onclick="show('players')">Joueurs</button>
+  <button onclick="show('matches')">Matchs</button>
+  <button onclick="show('ranking')">Classement</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="grid">
+    <div class="card">👥 Équipes <h2>18</h2></div>
+    <div class="card">👤 Joueurs <h2>90</h2></div>
+  </div>
+</section>
+
+<!-- TEAMS -->
+<section id="teams" class="page">
+  <h2>Équipes</h2>
+  <div id="teamList"></div>
+</section>
+
+<!-- PLAYERS -->
+<section id="players" class="page">
+  <h2>Classement Joueurs</h2>
+  <div id="playerList"></div>
+</section>
+
+<!-- MATCHS -->
+<section id="matches" class="page">
+  <h2>Matchs</h2>
+  <div id="matchList"></div>
+</section>
+
+<!-- CLASSEMENT -->
+<section id="ranking" class="page">
+  <h2>Classement équipes</h2>
+  <div id="rankingList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
