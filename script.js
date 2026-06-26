@@ -4,7 +4,6 @@ let matches = [];
 
 /* =========================
    18 EQUIPES + 90 JOUEURS
-   (BASE FIXE PROPRE)
 ========================= */
 
 for (let i = 1; i <= 18; i++) {
@@ -52,7 +51,7 @@ for (let i = 0; i < 18; i++) {
 }
 
 /* =========================
-   NAVIGATION
+   NAV
 ========================= */
 
 function show(page) {
@@ -61,7 +60,7 @@ function show(page) {
 }
 
 /* =========================
-   PLAYERS (KD COLORÉ)
+   PLAYERS
 ========================= */
 
 function renderPlayers() {
@@ -70,20 +69,22 @@ function renderPlayers() {
     return (b.k / (b.m || 1)) - (a.k / (a.m || 1));
   });
 
-  document.getElementById("playerList").innerHTML =
-    sorted.map((p, i) => {
+  const el = document.getElementById("playerList");
+  if (!el) return;
 
-      let kd = p.k / (p.m || 1);
+  el.innerHTML = sorted.map((p, i) => {
 
-      let cls = kd >= 2 ? "kd-good" : kd >= 1 ? "kd-mid" : "kd-bad";
+    let kd = p.k / (p.m || 1);
 
-      return `
-      <div>
-      ${i + 1}. ${p.name} (${p.team})<br>
-      K:${p.k} A:${p.a} M:${p.m} —
-      <span class="${cls}">KD ${kd.toFixed(2)}</span>
-      </div>`;
-    }).join("");
+    let cls = kd >= 2 ? "kd-good" : kd >= 1 ? "kd-mid" : "kd-bad";
+
+    return `
+    <div>
+    ${i + 1}. ${p.name} (${p.team})<br>
+    K:${p.k} A:${p.a} M:${p.m} —
+    <span class="${cls}">KD ${kd.toFixed(2)}</span>
+    </div>`;
+  }).join("");
 }
 
 /* =========================
@@ -92,8 +93,10 @@ function renderPlayers() {
 
 function renderTeams() {
 
-  document.getElementById("teamList").innerHTML =
-    teams.map(t => `
+  const el = document.getElementById("teamList");
+  if (!el) return;
+
+  el.innerHTML = teams.map(t => `
     <div>
       <img src="${t.logo}" width="35">
       <b>${t.name}</b><br>
@@ -103,55 +106,60 @@ function renderTeams() {
 }
 
 /* =========================
-   MATCHS (WIN/LOSE COLOR)
+   MATCHS
 ========================= */
 
 function renderMatches() {
 
-  document.getElementById("matchList").innerHTML =
-    matches.map(m => {
+  const el = document.getElementById("matchList");
+  if (!el) return;
 
-      let s1 = m.s1 > m.s2 ? "win" : "lose";
-      let s2 = m.s2 > m.s1 ? "win" : "lose";
+  el.innerHTML = matches.map(m => {
 
-      return `
-      <div>
-      ${m.t1} <span class="${s1}">${m.s1}</span>
-      -
-      <span class="${s2}">${m.s2}</span>
-      ${m.t2}
-      </div>`;
-    }).join("");
+    let s1 = m.s1 > m.s2 ? "win" : "lose";
+    let s2 = m.s2 > m.s1 ? "win" : "lose";
+
+    return `
+    <div>
+    ${m.t1} <span class="${s1}">${m.s1}</span>
+    -
+    <span class="${s2}">${m.s2}</span>
+    ${m.t2}
+    </div>`;
+  }).join("");
 }
 
 /* =========================
    CLASSEMENT EQUIPES
+   🔥 FIX BLEU / ROUGE
 ========================= */
 
 function renderRanking() {
 
   let sorted = [...teams].sort((a, b) => b.pts - a.pts);
 
-  document.getElementById("rankingList").innerHTML =
-    sorted.map((t, i) => {
+  const el = document.getElementById("rankingList");
+  if (!el) return;
 
-      let cls;
+  el.innerHTML = sorted.map((t, i) => {
 
-      if (i === 0) cls = "rank1";
-      else if (i === 1) cls = "rank2";
-      else if (i === 2) cls = "rank3";
-      else if (i >= 3 && i <= 13) cls = "rank-blue";
-      else cls = "rank-red";
+    let cls;
 
-      return `
-      <div class="${cls}">
-        ${i + 1}. <img src="${t.logo}" width="25"> ${t.name} — ${t.pts} pts
-      </div>`;
-    }).join("");
+    if (i === 0) cls = "rank1";
+    else if (i === 1) cls = "rank2";
+    else if (i === 2) cls = "rank3";
+    else if (i >= 3 && i <= 13) cls = "rank-blue";
+    else cls = "rank-red";
+
+    return `
+    <div class="${cls}">
+      ${i + 1}. <img src="${t.logo}" width="25"> ${t.name} — ${t.pts} pts
+    </div>`;
+  }).join("");
 }
 
 /* =========================
-   INIT
+   INIT SAFE
 ========================= */
 
 window.onload = () => {
