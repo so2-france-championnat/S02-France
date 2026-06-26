@@ -1,0 +1,103 @@
+body{
+margin:0;
+font-family:Arial;
+background:#070712;
+color:white;
+}
+
+/* HEADER LOGO STYLE */
+header{
+background:linear-gradient(90deg,#ff004c,#00e5ff);
+padding:18px;
+text-align:center;
+font-weight:bold;
+letter-spacing:2px;
+box-shadow:0 0 20px rgba(0,229,255,0.3);
+}
+
+.logo{
+font-size:18px;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:center;
+gap:10px;
+background:#111;
+padding:10px;
+}
+
+button{
+background:#1b1b2a;
+border:1px solid #00e5ff;
+color:white;
+padding:8px 12px;
+border-radius:6px;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:40px 10px;
+}
+
+.hero h1{
+font-size:40px;
+margin:0;
+color:#ff004c;
+}
+
+.hero h2{
+margin:5px 0;
+color:#00e5ff;
+}
+
+/* PAGES */
+.page{
+display:none;
+padding:15px;
+}
+
+.page.active{
+display:block;
+}
+
+/* INPUT */
+input{
+display:block;
+width:95%;
+margin:5px 0;
+padding:10px;
+background:#111;
+border:1px solid #333;
+color:white;
+border-radius:5px;
+}
+
+/* CARDS */
+.card{
+background:#121224;
+padding:10px;
+margin:8px 0;
+border-left:3px solid #00e5ff;
+border-radius:5px;
+}
+
+/* MATCH */
+.match{
+background:#121224;
+padding:10px;
+margin:8px 0;
+border-left:3px solid #ff004c;
+border-radius:5px;
+}
+
+/* RANK */
+.rank{
+background:#0f0f1a;
+padding:10px;
+margin:6px 0;
+border:1px solid #222;
+border-radius:5px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S2 France Championship</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER PRO -->
+<header>
+  <div class="logo">
+    🏆 S2 FRANCE CHAMPIONSHIP
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <button onclick="show('home')">Accueil</button>
+  <button onclick="show('teams')">Équipes</button>
+  <button onclick="show('matches')">Matchs</button>
+  <button onclick="show('ranking')">Classement</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h1>STANDOFF 2</h1>
+    <h2>FRANCE CHAMPIONSHIP</h2>
+    <p>Compétition officielle - Saison 1</p>
+  </div>
+</section>
+
+<!-- TEAMS -->
+<section id="teams" class="page">
+  <h2>Équipes</h2>
+
+  <div id="teamList"></div>
+
+  <input id="teamName" placeholder="Nom de l'équipe">
+  <button onclick="addTeam()">Ajouter équipe</button>
+</section>
+
+<!-- MATCHES -->
+<section id="matches" class="page">
+  <h2>Matchs</h2>
+
+  <div id="matchList"></div>
+
+  <input id="t1" placeholder="Équipe 1">
+  <input id="t2" placeholder="Équipe 2">
+  <input id="s1" placeholder="Score 1">
+  <input id="s2" placeholder="Score 2">
+
+  <button onclick="addMatch()">Ajouter match</button>
+</section>
+
+<!-- RANKING -->
+<section id="ranking" class="page">
+  <h2>Classement</h2>
+  <div id="rankingTable"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
