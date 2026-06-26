@@ -1,0 +1,123 @@
+body{
+margin:0;
+font-family:Arial;
+background:#05060a;
+color:white;
+overflow-x:hidden;
+}
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, rgba(0,140,255,0.35), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(255,255,255,0.10), transparent 40%),
+radial-gradient(circle at 50% 80%, rgba(255,0,60,0.25), transparent 40%);
+filter:blur(60px);
+z-index:-1;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:rgba(255,255,255,0.03);
+border-bottom:1px solid rgba(0,140,255,0.3);
+}
+
+.brand{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.logo{
+width:35px;
+height:35px;
+border-radius:50%;
+}
+
+.title{
+color:#008cff;
+font-weight:bold;
+}
+
+.live{
+color:#ff0033;
+}
+
+/* SOCIAL */
+.social{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:10px;
+}
+
+.social button{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,140,255,0.3);
+color:white;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* NAV */
+.nav{
+display:flex;
+gap:8px;
+padding:10px;
+overflow-x:auto;
+}
+
+.nav button{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,140,255,0.2);
+color:white;
+padding:10px;
+border-radius:8px;
+}
+
+.page{display:none;padding:10px;}
+.page.active{display:block;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+padding:15px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.season{
+grid-column:1/-1;
+text-align:center;
+padding:20px;
+border-left:4px solid #008cff;
+}
+
+#teamList div,
+#playerList div,
+#matchList div,
+#rankingList div{
+background:rgba(255,255,255,0.03);
+padding:10px;
+margin:6px 0;
+border-radius:10px;
+border-left:3px solid #008cff;
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+/* KD COLORS */
+.kd-good{color:#00ff88;font-weight:bold;}
+.kd-medium{color:#ffcc00;font-weight:bold;}
+.kd-bad{color:#ff0033;font-weight:bold;}
