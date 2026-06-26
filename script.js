@@ -25,12 +25,12 @@ document.getElementById("teamCount").innerText = teams.length;
 document.getElementById("playerCount").innerText = players.length;
 document.getElementById("matchCount").innerText = matches.length;
 
-/* TEAMS AVEC LOGO */
+/* TEAMS */
 document.getElementById("teamList").innerHTML =
 teams.map(t=>`
 <div>
 <img src="${t.logo}" class="teamLogo">
-🏆 ${t.name} — ${t.pts} pts
+<b>${t.name}</b> — ${t.pts} pts
 </div>
 `).join("");
 
@@ -38,9 +38,9 @@ teams.map(t=>`
 document.getElementById("playerList").innerHTML =
 players.map(p=>`
 <div>
-👤 ${p.name} (${p.team})<br>
+👤 <b>${p.name}</b> (${p.team})<br>
 🎯 K:${p.k} 🤝 A:${p.a} 💀 D:${p.d}<br>
-⭐ Score:${p.k + p.a - p.d}
+⭐ Score: ${p.k + p.a - p.d}
 </div>
 `).join("");
 
@@ -57,7 +57,7 @@ document.getElementById("rankingList").innerHTML =
 sorted.map(t=>`
 <div>
 <img src="${t.logo}" class="teamLogo">
-🏆 ${t.name} — ${t.pts} pts
+<b>${t.name}</b> — ${t.pts} pts
 </div>
 `).join("");
 

@@ -1,0 +1,156 @@
+body{
+margin:0;
+font-family:Arial;
+background:#05060a;
+color:white;
+overflow-x:hidden;
+}
+
+/* 🌌 BACKGROUND ANIMÉ */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%, #00e5ff55, transparent 40%),
+radial-gradient(circle at 80% 30%, #ff004c44, transparent 40%),
+radial-gradient(circle at 50% 80%, #00ff9955, transparent 40%);
+filter:blur(60px);
+animation:move 14s infinite linear;
+z-index:-2;
+}
+
+@keyframes move{
+0%{transform:rotate(0deg) scale(1);}
+50%{transform:rotate(180deg) scale(1.1);}
+100%{transform:rotate(360deg) scale(1);}
+}
+
+/* 🌫 NOISE */
+.noise{
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://grainy-gradients.vercel.app/noise.svg");
+opacity:0.05;
+z-index:-1;
+pointer-events:none;
+}
+
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(0,229,255,0.2);
+}
+
+.logo{
+color:#00e5ff;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.live{
+color:#ff004c;
+font-weight:bold;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1;}
+50%{opacity:0.4;}
+100%{opacity:1;}
+}
+
+/* NAV */
+.nav{
+display:flex;
+gap:8px;
+padding:10px;
+overflow-x:auto;
+}
+
+.nav button{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,229,255,0.2);
+color:white;
+padding:10px;
+border-radius:10px;
+}
+
+.nav button:hover{
+background:#00e5ff22;
+}
+
+/* PAGES */
+.page{display:none;padding:10px;}
+.page.active{display:block;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+padding:15px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+transition:0.2s;
+}
+
+.card:hover{
+transform:scale(1.03);
+border:1px solid #00e5ff55;
+}
+
+.glow{
+box-shadow:0 0 25px rgba(0,229,255,0.15);
+}
+
+.highlight{
+margin-top:12px;
+border-left:4px solid #ff004c;
+}
+
+/* TITRES */
+.title{
+padding:10px;
+color:#00e5ff;
+}
+
+/* LISTES */
+#teamList div,
+#playerList div,
+#matchList div,
+#rankingList div{
+background:rgba(255,255,255,0.03);
+padding:12px;
+margin:8px 0;
+border-radius:10px;
+border-left:3px solid #00e5ff;
+display:flex;
+gap:10px;
+align-items:center;
+transition:0.2s;
+}
+
+#teamList div:hover{
+transform:translateX(5px);
+border-left:3px solid #ff004c;
+}
+
+/* LOGO TEAM */
+.teamLogo{
+width:34px;
+height:34px;
+border-radius:50%;
+object-fit:cover;
+border:1px solid #00e5ff;
+}

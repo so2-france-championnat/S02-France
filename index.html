@@ -10,10 +10,11 @@
 <body>
 
 <div class="bg"></div>
+<div class="noise"></div>
 
 <header class="header">
   <div class="logo">🎮 S2 FRANCE CHAMPIONSHIP</div>
-  <div class="tag">SEASON 1 • LIVE</div>
+  <div class="live">● LIVE SEASON 1</div>
 </header>
 
 <nav class="nav">
@@ -24,41 +25,58 @@
   <button onclick="show('ranking')">Classement</button>
 </nav>
 
-<!-- HOME -->
+<!-- DASHBOARD -->
 <section id="home" class="page active">
   <div class="grid">
-    <div class="card">👥 Équipes <h2 id="teamCount"></h2></div>
-    <div class="card">👤 Joueurs <h2 id="playerCount"></h2></div>
-    <div class="card">⚔️ Matchs <h2 id="matchCount"></h2></div>
-    <div class="card">🏆 Saison <h2>S1</h2></div>
+
+    <div class="card glow">
+      👥 Équipes
+      <h2 id="teamCount"></h2>
+    </div>
+
+    <div class="card glow">
+      👤 Joueurs
+      <h2 id="playerCount"></h2>
+    </div>
+
+    <div class="card glow">
+      ⚔️ Matchs
+      <h2 id="matchCount"></h2>
+    </div>
+
+    <div class="card glow">
+      🏆 Saison
+      <h2>S1</h2>
+    </div>
+
   </div>
 
-  <div class="card full">
-    🔥 Dernier match : Alpha 13 - 10 Omega
+  <div class="card highlight">
+    🔥 MATCH DU MOMENT : Alpha 13 - 10 Omega (BO3)
   </div>
 </section>
 
 <!-- TEAMS -->
 <section id="teams" class="page">
-  <h2>Équipes</h2>
+  <h2 class="title">Équipes</h2>
   <div id="teamList"></div>
 </section>
 
 <!-- PLAYERS -->
 <section id="players" class="page">
-  <h2>Joueurs</h2>
+  <h2 class="title">Joueurs</h2>
   <div id="playerList"></div>
 </section>
 
-<!-- MATCHS -->
+<!-- MATCHES -->
 <section id="matches" class="page">
-  <h2>Matchs</h2>
+  <h2 class="title">Matchs</h2>
   <div id="matchList"></div>
 </section>
 
 <!-- RANKING -->
 <section id="ranking" class="page">
-  <h2>Classement</h2>
+  <h2 class="title">Classement</h2>
   <div id="rankingList"></div>
 </section>
 
