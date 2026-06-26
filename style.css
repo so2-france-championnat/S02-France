@@ -1,0 +1,118 @@
+body{
+margin:0;
+font-family:Arial;
+background:#05060a;
+color:white;
+}
+
+/* LAYOUT */
+.container{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:220px;
+background:#0b0f1a;
+padding:20px;
+border-right:1px solid #00e5ff;
+}
+
+.sidebar h2{
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+.sidebar a{
+display:block;
+padding:10px;
+margin:5px 0;
+cursor:pointer;
+color:white;
+background:#111827;
+border-left:3px solid transparent;
+}
+
+.sidebar a:hover{
+border-left:3px solid #ff004c;
+}
+
+/* MAIN */
+.main{
+flex:1;
+padding:20px;
+}
+
+/* TOPBAR */
+.topbar{
+background:#0b0f1a;
+padding:15px;
+border-bottom:1px solid #00e5ff;
+margin-bottom:20px;
+}
+
+/* GRID DASHBOARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card{
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+border:1px solid #1f2937;
+}
+
+.neon{
+box-shadow:0 0 15px rgba(0,229,255,0.2);
+border:1px solid #00e5ff;
+}
+
+/* PAGES */
+.page{display:none;}
+.page.active{display:block;}
+
+/* INPUT */
+input{
+width:100%;
+padding:10px;
+margin:5px 0;
+background:#111827;
+border:1px solid #333;
+color:white;
+}
+
+button{
+padding:10px;
+background:#00e5ff;
+border:none;
+color:black;
+font-weight:bold;
+cursor:pointer;
+margin-top:5px;
+}
+
+/* LISTS */
+#teamList div,
+#matchList div{
+background:#111827;
+padding:10px;
+margin:5px 0;
+border-left:3px solid #ff004c;
+}
+
+/* TABLE */
+.table div{
+background:#111827;
+padding:10px;
+margin:5px 0;
+border-left:3px solid #00e5ff;
+}
+
+body{
+background:url("background.jpg") no-repeat center center fixed;
+background-size:cover;
+}
