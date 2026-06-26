@@ -1,0 +1,181 @@
+body{
+margin:0;
+font-family:Arial;
+background:#05060a;
+color:white;
+overflow-x:hidden;
+}
+
+/* OVERLAY FR NEON */
+.overlay{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-2;
+
+background:
+radial-gradient(circle at 20% 20%, rgba(0,140,255,0.35), transparent 35%),
+radial-gradient(circle at 70% 50%, rgba(255,255,255,0.20), transparent 35%),
+radial-gradient(circle at 40% 80%, rgba(255,0,60,0.30), transparent 35%);
+
+filter:blur(40px);
+animation:frmove 6s infinite linear;
+opacity:0.9;
+}
+
+@keyframes frmove{
+0%{transform:scale(1) rotate(0deg);}
+50%{transform:scale(1.15) rotate(180deg);}
+100%{transform:scale(1) rotate(360deg);}
+}
+
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+padding:15px;
+}
+
+.brand{display:flex;gap:10px;align-items:center;}
+.logo{width:40px;height:40px;border-radius:50%;}
+.title{color:#008cff;font-weight:bold;}
+
+/* =========================
+   LIVE PRO ANIMATION
+========================= */
+
+.live{
+color:#ff0033;
+font-weight:bold;
+animation:blinkPro 1.2s infinite;
+text-shadow:0 0 10px rgba(255,0,51,0.8);
+}
+
+@keyframes blinkPro {
+0% {
+  opacity: 1;
+  transform: scale(1);
+  color:#ff0033;
+  text-shadow: 0 0 10px #ff0033;
+}
+
+50% {
+  opacity: 0.4;
+  transform: scale(1.05);
+  color:#ffffff;
+  text-shadow: 0 0 20px #ffffff, 0 0 30px #ff0033;
+}
+
+100% {
+  opacity: 1;
+  transform: scale(1);
+  color:#ff0033;
+  text-shadow: 0 0 10px #ff0033;
+}
+}
+
+/* SOCIAL */
+.social{
+display:flex;
+justify-content:center;
+gap:12px;
+padding:10px;
+}
+
+.social button{
+padding:10px 18px;
+border:none;
+border-radius:12px;
+font-weight:bold;
+cursor:pointer;
+transition:0.25s;
+color:white;
+}
+
+.discord{background:#5865F2;box-shadow:0 0 12px #5865F2;}
+.twitch{background:#9146FF;box-shadow:0 0 12px #9146FF;}
+.youtube{background:#FF0033;box-shadow:0 0 12px #FF0033;}
+
+.social button:hover{
+transform:scale(1.08);
+}
+
+/* NAV */
+.nav{
+display:flex;
+gap:8px;
+padding:10px;
+overflow-x:auto;
+}
+
+.nav button{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,140,255,0.2);
+color:white;
+padding:10px;
+border-radius:8px;
+}
+
+/* PAGES */
+.page{display:none;padding:10px;}
+.page.active{display:block;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+padding:15px;
+border-radius:12px;
+}
+
+.clickable{
+cursor:pointer;
+transition:0.3s;
+}
+
+.clickable:hover{
+transform:scale(1.03);
+border-left:4px solid #008cff;
+}
+
+/* RATIOS */
+.kd-good{color:#00ff88;font-weight:bold;}
+.kd-mid{color:#ffb300;font-weight:bold;}
+.kd-bad{color:#ff0033;font-weight:bold;}
+
+/* MATCHS */
+.win{color:#00ff88;font-weight:bold;}
+.lose{color:#ff0033;font-weight:bold;}
+
+/* =========================
+   RANKING TEAMS
+========================= */
+
+.rank1{
+border-left:6px solid gold;
+background:rgba(255,215,0,0.08);
+}
+
+.rank2{
+border-left:6px solid silver;
+background:rgba(192,192,192,0.08);
+}
+
+.rank3{
+border-left:6px solid #cd7f32;
+background:rgba(205,127,50,0.08);
+}
+
+.rank-blue{
+border-left:5px solid #008cff;
+background:rgba(0,140,255,0.06);
+}
+
+.rank-red{
+border-left:5px solid #ff0033;
+background:rgba(255,0,51,0.08);
+}
