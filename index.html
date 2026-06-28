@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SO2 FR CHAMPIONNAT</title>
+<title>SO2 FR CHAMPIONSHIP</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,10 +15,10 @@
 <header class="header">
   <div class="brand">
     <img src="logo.jpg" class="logo">
-    <div class="title">SO2 FR CHAMPIONNAT</div>
+    <div class="title">SO2 FR CHAMPIONSHIP</div>
   </div>
 
-  <div class="live">● SAISON 1</div>
+  <div class="live">● SEASON 1</div>
 </header>
 
 <!-- SOCIAL RESTO PRO -->
@@ -29,11 +29,11 @@
 </div>
 
 <nav class="nav">
-  <button onclick="show('home')">Accueil</button>
-  <button onclick="show('teams')">Équipes</button>
-  <button onclick="show('players')">Joueurs</button>
-  <button onclick="show('matches')">Matchs</button>
-  <button onclick="show('ranking')">Classement</button>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('teams')">Teams</button>
+  <button onclick="show('players')">Players</button>
+  <button onclick="show('matches')">Match</button>
+  <button onclick="show('ranking')">Standings</button>
 </nav>
 
 <!-- HOME MENU -->
@@ -41,19 +41,19 @@
   <div class="grid">
 
     <div class="card clickable" onclick="show('teams')">
-      👥 Équipes <h2>18</h2>
+      👥 Team <h2>18</h2>
     </div>
 
     <div class="card clickable" onclick="show('players')">
-      👤 Joueurs <h2>90</h2>
+      👤 Players <h2>90</h2>
     </div>
 
     <div class="card clickable" onclick="show('matches')">
-      ⚔️ Matchs
+      ⚔️ Match
     </div>
 
     <div class="card clickable" onclick="show('ranking')">
-      🏆 Classement
+      🏆 Rankings
     </div>
 
   </div>
@@ -61,25 +61,25 @@
 
 <!-- TEAMS -->
 <section id="teams" class="page">
-  <h2>Équipes</h2>
+  <h2>Team</h2>
   <div id="teamList"></div>
 </section>
 
 <!-- PLAYERS -->
 <section id="players" class="page">
-  <h2>Classement Joueurs</h2>
+  <h2>Leaderboard</h2>
   <div id="playerList"></div>
 </section>
 
 <!-- MATCH -->
 <section id="matches" class="page">
-  <h2>Matchs</h2>
+  <h2>Match</h2>
   <div id="matchList"></div>
 </section>
 
 <!-- RANKING -->
 <section id="ranking" class="page">
-  <h2>Classement équipes</h2>
+  <h2>Team Rankings</h2>
   <div id="rankingList"></div>
 </section>
 
