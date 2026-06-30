@@ -23,11 +23,23 @@
 
 <!-- SOCIAL -->
 <div class="social">
-  <button class="discord" onclick="window.open('https://discord.gg/WzN424KX6')">Discord</button>
-  <button class="twitch" onclick="window.open('https://m.twitch.tv/so2francechampionnat/home')">Twitch</button>
-  <button class="youtube" onclick="window.open('https://m.youtube.com/channel/UCypbT6QGPC0oARGa3n1XbRQ?ra=m')">YouTube</button>
+  <button class="discord"
+          onclick="window.open('https://discord.gg/WzN424KX6')">
+          Discord
+  </button>
+
+  <button class="twitch"
+          onclick="window.open('https://m.twitch.tv/so2francechampionnat/home')">
+          Twitch
+  </button>
+
+  <button class="youtube"
+          onclick="window.open('https://m.youtube.com/channel/UCypbT6QGPC0oARGa3n1XbRQ?ra=m')">
+          YouTube
+  </button>
 </div>
 
+<!-- NAVIGATION -->
 <nav class="nav">
   <button onclick="show('home')">Home</button>
   <button onclick="show('teams')">Teams</button>
@@ -36,7 +48,10 @@
   <button onclick="show('ranking')">Rankings</button>
 </nav>
 
-<!-- HOME -->
+<!-- =========================
+         HOME
+========================= -->
+
 <section id="home" class="page active">
 
   <div class="grid">
@@ -61,37 +76,74 @@
 
   </div>
 
-  <!-- IMAGE INTERNATIONALE -->
+  <!-- IMAGE CHAMPIONSHIP -->
   <div class="home-banner">
-    <img src="international.jpg" alt="SO2 International Tournament">
+    <img src="international.jpg"
+         alt="SO2 International Championship">
   </div>
 
 </section>
 
-<!-- TEAMS -->
+<!-- =========================
+         TEAMS
+========================= -->
+
 <section id="teams" class="page">
   <h2>Teams</h2>
+
   <div id="teamList"></div>
 </section>
 
-<!-- PLAYERS -->
+<!-- =========================
+         PLAYERS
+========================= -->
+
 <section id="players" class="page">
-  <h2>Leaderboard</h2>
+
+  <h2>Players</h2>
+
+  <!-- Boutons -->
+  <div class="player-nav">
+
+    <button onclick="renderPlayers()">
+      Leaderboard
+    </button>
+
+    <button onclick="renderStatsMenu()">
+      Stats
+    </button>
+
+  </div>
+
+  <!-- Leaderboard -->
   <div id="playerList"></div>
+
+  <!-- Stats -->
+  <div id="playerStats"></div>
+
 </section>
 
-<!-- MATCHES -->
+<!-- =========================
+         MATCHES
+========================= -->
+
 <section id="matches" class="page">
   <h2>Matches</h2>
+
   <div id="matchList"></div>
 </section>
 
-<!-- RANKING -->
+<!-- =========================
+         RANKINGS
+========================= -->
+
 <section id="ranking" class="page">
   <h2>Team Rankings</h2>
+
   <div id="rankingList"></div>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
