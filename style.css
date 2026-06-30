@@ -6,7 +6,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* OVERLAY FR NEON */
+/* OVERLAY */
 .overlay{
 position:fixed;
 width:100%;
@@ -30,19 +30,32 @@ opacity:0.9;
 }
 
 /* HEADER */
+
 .header{
 display:flex;
 justify-content:space-between;
 padding:15px;
+align-items:center;
 }
 
-.brand{display:flex;gap:10px;align-items:center;}
-.logo{width:40px;height:40px;border-radius:50%;}
-.title{color:#008cff;font-weight:bold;}
+.brand{
+display:flex;
+gap:10px;
+align-items:center;
+}
 
-/* =========================
-   LIVE PRO ANIMATION
-========================= */
+.logo{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+.title{
+color:#008cff;
+font-weight:bold;
+}
+
+/* LIVE */
 
 .live{
 color:#ff0033;
@@ -51,35 +64,41 @@ animation:blinkPro 1.2s infinite;
 text-shadow:0 0 10px rgba(255,0,51,0.8);
 }
 
-@keyframes blinkPro {
-0% {
-  opacity: 1;
-  transform: scale(1);
-  color:#ff0033;
-  text-shadow: 0 0 10px #ff0033;
+@keyframes blinkPro{
+
+0%{
+opacity:1;
+transform:scale(1);
+color:#ff0033;
+text-shadow:0 0 10px #ff0033;
 }
 
-50% {
-  opacity: 0.4;
-  transform: scale(1.05);
-  color:#ffffff;
-  text-shadow: 0 0 20px #ffffff, 0 0 30px #ff0033;
+50%{
+opacity:0.4;
+transform:scale(1.05);
+color:white;
+text-shadow:
+0 0 20px white,
+0 0 30px #ff0033;
 }
 
-100% {
-  opacity: 1;
-  transform: scale(1);
-  color:#ff0033;
-  text-shadow: 0 0 10px #ff0033;
+100%{
+opacity:1;
+transform:scale(1);
+color:#ff0033;
+text-shadow:0 0 10px #ff0033;
 }
+
 }
 
 /* SOCIAL */
+
 .social{
 display:flex;
 justify-content:center;
 gap:12px;
 padding:10px;
+flex-wrap:wrap;
 }
 
 .social button{
@@ -92,15 +111,27 @@ transition:0.25s;
 color:white;
 }
 
-.discord{background:#5865F2;box-shadow:0 0 12px #5865F2;}
-.twitch{background:#9146FF;box-shadow:0 0 12px #9146FF;}
-.youtube{background:#FF0033;box-shadow:0 0 12px #FF0033;}
+.discord{
+background:#5865F2;
+box-shadow:0 0 12px #5865F2;
+}
+
+.twitch{
+background:#9146FF;
+box-shadow:0 0 12px #9146FF;
+}
+
+.youtube{
+background:#FF0033;
+box-shadow:0 0 12px #FF0033;
+}
 
 .social button:hover{
 transform:scale(1.08);
 }
 
 /* NAV */
+
 .nav{
 display:flex;
 gap:8px;
@@ -114,11 +145,19 @@ border:1px solid rgba(0,140,255,0.2);
 color:white;
 padding:10px;
 border-radius:8px;
+cursor:pointer;
 }
 
 /* PAGES */
-.page{display:none;padding:10px;}
-.page.active{display:block;}
+
+.page{
+display:none;
+padding:10px;
+}
+
+.page.active{
+display:block;
+}
 
 .grid{
 display:grid;
@@ -130,6 +169,8 @@ gap:10px;
 background:rgba(255,255,255,0.03);
 padding:15px;
 border-radius:12px;
+margin-bottom:10px;
+backdrop-filter:blur(5px);
 }
 
 .clickable{
@@ -142,18 +183,62 @@ transform:scale(1.03);
 border-left:4px solid #008cff;
 }
 
-/* RATIOS */
-.kd-good{color:#00ff88;font-weight:bold;}
-.kd-mid{color:#ffb300;font-weight:bold;}
-.kd-bad{color:#ff0033;font-weight:bold;}
+/* PLAYER MENU */
 
-/* MATCHS */
-.win{color:#00ff88;font-weight:bold;}
-.lose{color:#ff0033;font-weight:bold;}
+.player-nav{
+display:flex;
+gap:10px;
+margin-bottom:15px;
+}
 
-/* =========================
-   RANKING TEAMS
-========================= */
+.player-nav button{
+flex:1;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(0,140,255,0.25);
+color:white;
+padding:12px;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+transition:0.25s;
+}
+
+.player-nav button:hover{
+transform:scale(1.03);
+border-color:#008cff;
+box-shadow:0 0 12px rgba(0,140,255,0.35);
+}
+
+/* KD */
+
+.kd-good{
+color:#00ff88;
+font-weight:bold;
+}
+
+.kd-mid{
+color:#ffb300;
+font-weight:bold;
+}
+
+.kd-bad{
+color:#ff0033;
+font-weight:bold;
+}
+
+/* MATCH */
+
+.win{
+color:#00ff88;
+font-weight:bold;
+}
+
+.lose{
+color:#ff0033;
+font-weight:bold;
+}
+
+/* RANKINGS */
 
 .rank1{
 border-left:6px solid gold;
@@ -180,16 +265,18 @@ border-left:5px solid #ff0033;
 background:rgba(255,0,51,0.08);
 }
 
+/* HOME BANNER */
+
 .home-banner{
-    margin-top:20px;
-    border-radius:20px;
-    overflow:hidden;
-    background:rgba(255,255,255,0.03);
-    box-shadow:0 0 25px rgba(0,140,255,0.15);
+margin-top:20px;
+border-radius:20px;
+overflow:hidden;
+background:rgba(255,255,255,0.03);
+box-shadow:0 0 25px rgba(0,140,255,0.15);
 }
 
 .home-banner img{
-    width:100%;
-    display:block;
-    border-radius:20px;
+width:100%;
+display:block;
+border-radius:20px;
 }
