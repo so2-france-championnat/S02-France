@@ -10,18 +10,35 @@ let openedPlayer = null;
 
 for(let i = 1; i <= 8; i++){
 
-    let teamName = "Team " + i;
+    let teamName =
+        i === 1
+        ? "GrizzlySDBT"
+        : "Team " + i;
+
     let logo = `team${i}.jpg`;
 
     let teamPlayers = [];
 
     for(let j = 1; j <= 3; j++){
 
-        let playerName = `T${i}P${j}`;
+        let playerName;
+
+        if(i === 1){
+
+            if(j === 1) playerName = "Freezy";
+            if(j === 2) playerName = "Wanheda";
+            if(j === 3) playerName = "Youko";
+
+        }else{
+
+            playerName = `T${i}P${j}`;
+
+        }
 
         let history = [];
 
         for(let m = 1; m <= 14; m++){
+
             history.push({
                 match:m,
                 opponent:"TBD",
@@ -29,6 +46,7 @@ for(let i = 1; i <= 8; i++){
                 a:0,
                 d:0
             });
+
         }
 
         players.push({
