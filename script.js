@@ -5,7 +5,7 @@ let matches = [];
 let openedPlayer = null;
 
 /* =========================
-   CREATION EQUIPES + JOUEURS
+   8 EQUIPES / 24 JOUEURS
 ========================= */
 
 for(let i = 1; i <= 8; i++){
@@ -22,63 +22,58 @@ for(let i = 1; i <= 8; i++){
         let history = [];
 
         for(let m = 1; m <= 14; m++){
-
             history.push({
-                match: m,
-                opponent: "TBD",
-                k: 0,
-                a: 0,
-                d: 0
+                match:m,
+                opponent:"TBD",
+                k:0,
+                a:0,
+                d:0
             });
-
         }
 
         players.push({
-            name: playerName,
-            team: teamName,
-            k: 0,
-            a: 0,
-            m: 0,
-            history: history
+            name:playerName,
+            team:teamName,
+            k:0,
+            a:0,
+            m:0,
+            history:history
         });
 
         teamPlayers.push(playerName);
     }
 
     teams.push({
-        name: teamName,
-        logo: logo,
-        pts: 0,
-        players: teamPlayers
+        name:teamName,
+        logo:logo,
+        pts:0,
+        players:teamPlayers
     });
 }
 
 /* =========================
-   MATCHS ALLER / RETOUR
+   MATCHS
 ========================= */
 
 for(let i = 0; i < teams.length; i++){
 
     for(let j = i + 1; j < teams.length; j++){
 
-        // Aller
         matches.push({
-            t1: teams[i].name,
-            t2: teams[j].name,
-            s1: 0,
-            s2: 0
+            t1:teams[i].name,
+            t2:teams[j].name,
+            s1:0,
+            s2:0
         });
 
-        // Retour
         matches.push({
-            t1: teams[j].name,
-            t2: teams[i].name,
-            s1: 0,
-            s2: 0
+            t1:teams[j].name,
+            t2:teams[i].name,
+            s1:0,
+            s2:0
         });
 
     }
-
 }
 
 /* =========================
@@ -110,16 +105,25 @@ function renderPlayers(){
 
         let kd = p.k/(p.m||1);
 
-        let cls =
+        let kdClass =
             kd >= 2 ? "kd-good" :
             kd >= 1 ? "kd-mid" :
             "kd-bad";
 
+        let rankClass;
+
+        if(i === 0) rankClass = "player-rank1";
+        else if(i === 1) rankClass = "player-rank2";
+        else if(i === 2) rankClass = "player-rank3";
+        else if(i <= 17) rankClass = "player-rank-blue";
+        else rankClass = "player-rank-red";
+
         return `
-        <div class="card">
+        <div class="card ${rankClass}">
             ${i+1}. ${p.name} (${p.team})<br>
             K:${p.k} A:${p.a} D:${p.m}<br>
-            <span class="${cls}">
+
+            <span class="${kdClass}">
                 KD ${kd.toFixed(2)}
             </span>
         </div>
@@ -140,9 +144,18 @@ function renderStatsMenu(){
     });
 
     document.getElementById("playerStats").innerHTML =
-    sorted.map((p,i)=>`
+    sorted.map((p,i)=>{
 
-        <div class="card clickable"
+        let rankClass;
+
+        if(i === 0) rankClass = "player-rank1";
+        else if(i === 1) rankClass = "player-rank2";
+        else if(i === 2) rankClass = "player-rank3";
+        else if(i <= 17) rankClass = "player-rank-blue";
+        else rankClass = "player-rank-red";
+
+        return `
+        <div class="card clickable ${rankClass}"
              onclick="togglePlayer('${p.name}')">
 
             <b>${i+1}. ${p.name}</b>
@@ -155,9 +168,7 @@ function renderStatsMenu(){
                 <b>Total :</b><br>
                 Kills : ${p.k}<br>
                 Assists : ${p.a}<br>
-                Deaths : ${p.m}<br>
-
-                <br>
+                Deaths : ${p.m}<br><br>
 
                 <b>KD :
                 ${(p.k/(p.m||1)).toFixed(2)}
@@ -179,8 +190,8 @@ function renderStatsMenu(){
             ` : ""}
 
         </div>
-
-    `).join("");
+        `;
+    }).join("");
 }
 
 /* =========================
@@ -234,18 +245,27 @@ function renderMatches(){
 
         return `
         <div class="card">
+
             ${m.t1}
-            <span class="${s1}">${m.s1}</span>
+            <span class="${s1}">
+                ${m.s1}
+            </span>
+
             -
-            <span class="${s2}">${m.s2}</span>
+
+            <span class="${s2}">
+                ${m.s2}
+            </span>
+
             ${m.t2}
+
         </div>
         `;
     }).join("");
 }
 
 /* =========================
-   CLASSEMENT EQUIPES
+   RANKINGS
 ========================= */
 
 function renderRanking(){
