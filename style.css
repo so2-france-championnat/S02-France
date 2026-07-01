@@ -179,8 +179,8 @@ transition:0.3s;
 }
 
 .clickable:hover{
-transform:scale(1.03);
-border-left:4px solid #008cff;
+    transform:scale(1.03);
+    box-shadow:0 0 15px rgba(0,140,255,0.3);
 }
 
 /* PLAYER NAV */
