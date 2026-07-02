@@ -32,11 +32,12 @@ else{
 
         if(i === 1){
 
-            if(j === 1) playerName = "Freezy";
-            if(j === 2) playerName = "Wanheda";
-            if(j === 3) playerName = "Youko";
+    if(j === 1) playerName = "Freezy";
+    if(j === 2) playerName = "Wanheda";
+    if(j === 3) playerName = "Youko";
 
-        else if(i === 2){
+}
+else if(i === 2){
 
     if(j === 1) playerName = "Lethalvirus21";
     if(j === 2) playerName = "Yazor";
