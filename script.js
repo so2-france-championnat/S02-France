@@ -10,10 +10,17 @@ let openedPlayer = null;
 
 for(let i = 1; i <= 8; i++){
 
-    let teamName =
-        i === 1
-        ? "GrizzlySDBT"
-        : "Team " + i;
+    let teamName;
+
+if(i === 1){
+    teamName = "GrizzlySDBT";
+}
+else if(i === 2){
+    teamName = "Bozkurt";
+}
+else{
+    teamName = "Team " + i;
+}
 
     let logo = `team${i}.jpg`;
 
@@ -29,9 +36,18 @@ for(let i = 1; i <= 8; i++){
             if(j === 2) playerName = "Wanheda";
             if(j === 3) playerName = "Youko";
 
-        }else{
+        else if(i === 2){
 
-            playerName = `T${i}P${j}`;
+    if(j === 1) playerName = "Lethalvirus21";
+    if(j === 2) playerName = "Yazor";
+    if(j === 3) playerName = "ZYWOo";
+
+}
+else{
+
+    playerName = `T${i}P${j}`;
+
+}
 
         }
 
