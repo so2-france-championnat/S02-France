@@ -27,6 +27,9 @@ else if(i === 4){
 else if(i === 5){
     teamName = "West Fear";
 }
+else if(i === 6){
+    teamName = "Buss Gang";
+}
 else{
     teamName = "Team " + i;
 }
@@ -72,6 +75,13 @@ else if(i === 5){
     if(j === 1) playerName = "Akra";
     if(j === 2) playerName = "Tarinx";
     if(j === 3) playerName = "Rijin";
+
+}
+else if(i === 6){
+
+    if(j === 1) playerName = "Homn";
+    if(j === 2) playerName = "Suzuki";
+    if(j === 3) playerName = "HorizoN";
 
 }
 else{
