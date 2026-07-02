@@ -307,3 +307,28 @@ width:100%;
 display:block;
 border-radius:20px;
 }
+
+.rank1-points{
+    color: gold;
+    font-weight: bold;
+}
+
+.rank2-points{
+    color: silver;
+    font-weight: bold;
+}
+
+.rank3-points{
+    color: #cd7f32;
+    font-weight: bold;
+}
+
+.rank-blue-points{
+    color: #008cff;
+    font-weight: bold;
+}
+
+.rank-red-points{
+    color: #ff0033;
+    font-weight: bold;
+}
