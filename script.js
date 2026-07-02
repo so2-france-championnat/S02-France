@@ -33,6 +33,9 @@ else if(i === 6){
 else if(i === 7){
     teamName = "CP-0";
 }
+else if(i === 8){
+    teamName = "CFti";
+}
 else{
     teamName = "Team " + i;
 }
@@ -92,6 +95,12 @@ else if(i === 7){
     if(j === 1) playerName = "Manji";
     if(j === 2) playerName = "Akaza";
     if(j === 3) playerName = "Tata";
+
+}else if(i === 8){
+
+    if(j === 1) playerName = "Irakli";
+    if(j === 2) playerName = "Zora Ytb";
+    if(j === 3) playerName = "Kurapika";
 
 }
 else{
