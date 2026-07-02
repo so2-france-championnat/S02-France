@@ -122,6 +122,30 @@ for(let i = 0; i < teams.length; i++){
     }
 }
 
+teams.forEach(team => {
+
+    let teamMatches = matches.filter(
+        m => m.t1 === team.name || m.t2 === team.name
+    );
+
+    team.players.forEach(playerName => {
+
+        let player = players.find(
+            p => p.name === playerName
+        );
+
+        for(let i = 0; i < teamMatches.length; i++){
+
+            let match = teamMatches[i];
+
+            player.history[i].opponent =
+                match.t1 === team.name
+                ? match.t2
+                : match.t1;
+        }
+    });
+});
+
 /* =========================
    NAVIGATION
 ========================= */
