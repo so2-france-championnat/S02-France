@@ -49,9 +49,9 @@ else{
 
     playerName = `T${i}P${j}`;
 
-        }
+}
 
-        let history = [];
+let history = [];
 
         for(let m = 1; m <= 14; m++){
 
