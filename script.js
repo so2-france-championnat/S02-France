@@ -447,22 +447,28 @@ function renderRanking(){
         }
 
         return `
-        <div class="card ${cls}">
-            ${i+1}.
-            <img src="${t.logo}" width="25">
-            ${t.name}
-            —
-            <span class="${ptsClass}">
-    ${t.pts} pts
-</span>
+<div class="card ${cls} ranking-card">
 
-|
+    <div class="ranking-left">
+        ${i+1}.
+        <img src="${t.logo}" width="25">
+        ${t.name}
+    </div>
 
-<span class="${ptsClass}">
-    RD ${t.rd >= 0 ? "+" : ""}${t.rd}
-</span>
-        </div>
-        `;
+    <div class="ranking-right">
+        <span class="${ptsClass}">
+            ${t.pts} pts
+        </span>
+
+        |
+
+        <span class="${ptsClass}">
+            RD ${t.rd >= 0 ? "+" : ""}${t.rd}
+        </span>
+    </div>
+
+</div>
+`;
     }).join("");
 }
 
