@@ -21,6 +21,12 @@ else if(i === 2){
 else if(i === 3){
     teamName = "VALHALLA";
 }
+else if(i === 4){
+    teamName = "Les 3 mousque teh";
+}
+else if(i === 5){
+    teamName = "West Fear";
+}
 else{
     teamName = "Team " + i;
 }
@@ -52,6 +58,20 @@ else if(i === 3){
     if(j === 1) playerName = "Ragnar";
     if(j === 2) playerName = "Nitsugo";
     if(j === 3) playerName = "Titan";
+
+}
+else if(i === 4){
+
+    if(j === 1) playerName = "Loic";
+    if(j === 2) playerName = "bri";
+    if(j === 3) playerName = "Nounours";
+
+}
+else if(i === 5){
+
+    if(j === 1) playerName = "Akra";
+    if(j === 2) playerName = "Tarinx";
+    if(j === 3) playerName = "Rijin";
 
 }
 else{
