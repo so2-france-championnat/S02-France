@@ -37,6 +37,7 @@ else{
     if(j === 3) playerName = "Youko";
 
 }
+           
 else if(i === 2){
 
     if(j === 1) playerName = "Lethalvirus21";
