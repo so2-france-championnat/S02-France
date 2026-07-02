@@ -376,3 +376,35 @@ border-radius:20px;
 .pending{
     color:#4fc3ff;
 }
+
+.match-number{
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.match-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.team-left,
+.team-right{
+    flex: 1;
+}
+
+.team-left{
+    text-align: left;
+}
+
+.team-right{
+    text-align: right;
+}
+
+.score{
+    min-width: 70px;
+    text-align: center;
+    font-weight: bold;
+}
