@@ -62,12 +62,14 @@ for(let i = 1; i <= 8; i++){
     }
 
     teams.push({
-        name:teamName,
-        logo:logo,
-        pts:0,
-        players:teamPlayers
-    });
-}
+    name:teamName,
+    logo:logo,
+    pts:0,
+    roundsWon:0,
+    roundsLost:0,
+    rd:0,
+    players:teamPlayers
+});
 
 /* =========================
    MATCHS
@@ -115,8 +117,16 @@ function renderPlayers(){
     document.getElementById("playerStats").innerHTML = "";
 
     let sorted = [...players].sort((a,b)=>{
-        return (b.k/(b.m||1)) - (a.k/(a.m||1));
-    });
+
+    let kdA = a.k/(a.m||1);
+    let kdB = b.k/(b.m||1);
+
+    if(kdB !== kdA) return kdB - kdA;
+    if(b.k !== a.k) return b.k - a.k;
+    if(b.a !== a.a) return b.a - a.a;
+
+    return 0;
+});
 
     document.getElementById("playerList").innerHTML =
     sorted.map((p,i)=>{
@@ -158,8 +168,16 @@ function renderStatsMenu(){
     document.getElementById("playerList").innerHTML = "";
 
     let sorted = [...players].sort((a,b)=>{
-        return (b.k/(b.m||1)) - (a.k/(a.m||1));
-    });
+
+    let kdA = a.k/(a.m||1);
+    let kdB = b.k/(b.m||1);
+
+    if(kdB !== kdA) return kdB - kdA;
+    if(b.k !== a.k) return b.k - a.k;
+    if(b.a !== a.a) return b.a - a.a;
+
+    return 0;
+});
 
     document.getElementById("playerStats").innerHTML =
     sorted.map((p,i)=>{
@@ -289,7 +307,18 @@ function renderMatches(){
 function renderRanking(){
 
     let sorted = [...teams]
-    .sort((a,b)=>b.pts-a.pts);
+.sort((a,b)=>{
+
+    if(b.pts !== a.pts){
+        return b.pts - a.pts;
+    }
+
+    if(b.rd !== a.rd){
+        return b.rd - a.rd;
+    }
+
+    return 0;
+});
 
     document.getElementById("rankingList").innerHTML =
     sorted.map((t,i)=>{
@@ -325,8 +354,14 @@ function renderRanking(){
             ${t.name}
             —
             <span class="${ptsClass}">
-                ${t.pts} pts
-            </span>
+    ${t.pts} pts
+</span>
+
+|
+
+<span class="${ptsClass}">
+    RD ${t.rd >= 0 ? "+" : ""}${t.rd}
+</span>
         </div>
         `;
     }).join("");
