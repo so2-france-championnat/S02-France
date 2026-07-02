@@ -18,6 +18,9 @@ if(i === 1){
 else if(i === 2){
     teamName = "Bozkurt";
 }
+else if(i === 3){
+    teamName = "VALHALLA";
+}
 else{
     teamName = "Team " + i;
 }
@@ -37,12 +40,18 @@ else{
     if(j === 3) playerName = "Youko";
 
 }
-           
 else if(i === 2){
 
     if(j === 1) playerName = "Lethalvirus21";
     if(j === 2) playerName = "Yazor";
     if(j === 3) playerName = "Zywoo";
+
+}
+else if(i === 3){
+
+    if(j === 1) playerName = "Ragnar";
+    if(j === 2) playerName = "Nitsugo";
+    if(j === 3) playerName = "Titan";
 
 }
 else{
