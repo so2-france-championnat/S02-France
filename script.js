@@ -367,7 +367,7 @@ function renderTeams(){
 function renderMatches(){
 
     document.getElementById("matchList").innerHTML =
-    matches.map(m=>{
+matches.map((m,i)=>{
 
         let s1 = "";
         let s2 = "";
@@ -380,6 +380,8 @@ function renderMatches(){
 
         return `
 <div class="card match-card">
+
+    <b>Match ${i+1}</b><br><br>
 
     <span class="team-left">
         ${m.t1}
@@ -471,6 +473,79 @@ function renderRanking(){
 </div>
 `;
     }).join("");
+}
+
+function updateMatch(matchNumber, score1, score2, stats1, stats2){
+
+    let match = matches[matchNumber - 1];
+
+    if(!match) return;
+
+    // Mise à jour du score
+    match.s1 = score1;
+    match.s2 = score2;
+
+    // Recherche des équipes
+    let team1 = teams.find(t => t.name === match.t1);
+    let team2 = teams.find(t => t.name === match.t2);
+
+    // Points championnat
+    if(score1 > score2){
+        team1.pts += 3;
+    }else{
+        team2.pts += 3;
+    }
+
+    // RD
+    team1.rd += score1 - score2;
+    team2.rd += score2 - score1;
+
+    team1.roundsWon += score1;
+    team1.roundsLost += score2;
+
+    team2.roundsWon += score2;
+    team2.roundsLost += score1;
+
+    // Stats équipe 1
+    stats1.forEach(stat => {
+
+        let player = players.find(
+            p => p.name === stat[0]
+        );
+
+        if(!player) return;
+
+        player.k += stat[1];
+        player.a += stat[2];
+        player.m += stat[3];
+
+        player.history[matchNumber - 1].k = stat[1];
+        player.history[matchNumber - 1].a = stat[2];
+        player.history[matchNumber - 1].d = stat[3];
+    });
+
+    // Stats équipe 2
+    stats2.forEach(stat => {
+
+        let player = players.find(
+            p => p.name === stat[0]
+        );
+
+        if(!player) return;
+
+        player.k += stat[1];
+        player.a += stat[2];
+        player.m += stat[3];
+
+        player.history[matchNumber - 1].k = stat[1];
+        player.history[matchNumber - 1].a = stat[2];
+        player.history[matchNumber - 1].d = stat[3];
+    });
+
+    renderPlayers();
+    renderStatsMenu();
+    renderMatches();
+    renderRanking();
 }
 
 /* =========================
