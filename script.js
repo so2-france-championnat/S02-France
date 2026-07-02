@@ -379,23 +379,24 @@ function renderMatches(){
         if(m.s2 < m.s1) s2 = "lose";
 
         return `
-        <div class="card">
+<div class="card match-card">
 
-            ${m.t1}
-            <span class="${s1}">
-                ${m.s1}
-            </span>
+    <span class="team-left">
+        ${m.t1}
+    </span>
 
-            -
+    <span class="score">
+        <span class="${s1 || 'pending'}">${m.s1}</span>
+        -
+        <span class="${s2 || 'pending'}">${m.s2}</span>
+    </span>
 
-            <span class="${s2}">
-                ${m.s2}
-            </span>
+    <span class="team-right">
+        ${m.t2}
+    </span>
 
-            ${m.t2}
-
-        </div>
-        `;
+</div>
+`;
     }).join("");
 }
 
