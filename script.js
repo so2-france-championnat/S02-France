@@ -49,8 +49,6 @@ else{
 
     playerName = `T${i}P${j}`;
 
-}
-
         }
 
         let history = [];
