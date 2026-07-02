@@ -295,19 +295,38 @@ function renderRanking(){
     sorted.map((t,i)=>{
 
         let cls;
+        let ptsClass;
 
-        if(i === 0) cls = "rank1";
-        else if(i === 1) cls = "rank2";
-        else if(i === 2) cls = "rank3";
-        else if(i <= 5) cls = "rank-blue";
-        else cls = "rank-red";
+        if(i === 0){
+            cls = "rank1";
+            ptsClass = "rank1-points";
+        }
+        else if(i === 1){
+            cls = "rank2";
+            ptsClass = "rank2-points";
+        }
+        else if(i === 2){
+            cls = "rank3";
+            ptsClass = "rank3-points";
+        }
+        else if(i <= 5){
+            cls = "rank-blue";
+            ptsClass = "rank-blue-points";
+        }
+        else{
+            cls = "rank-red";
+            ptsClass = "rank-red-points";
+        }
 
         return `
         <div class="card ${cls}">
             ${i+1}.
             <img src="${t.logo}" width="25">
             ${t.name}
-            — ${t.pts} pts
+            —
+            <span class="${ptsClass}">
+                ${t.pts} pts
+            </span>
         </div>
         `;
     }).join("");
