@@ -332,3 +332,20 @@ border-radius:20px;
     color: #ff0033;
     font-weight: bold;
 }
+
+.ranking-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.ranking-left{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex:1;
+}
+
+.ranking-right{
+    white-space:nowrap;
+}
