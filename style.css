@@ -352,24 +352,31 @@ border-radius:20px;
 
 .match-card{
     display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
+    flex-direction:column;
+    gap:12px;
 }
 
-.team-left{
-    flex:1;
+.match-number{
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+}
+
+.match-team1{
     text-align:left;
+    font-size:24px;
+    font-weight:bold;
 }
 
-.team-right{
-    flex:1;
-    text-align:right;
-}
-
-.score{
-    min-width:70px;
+.match-score{
     text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.match-team2{
+    text-align:right;
+    font-size:24px;
     font-weight:bold;
 }
 
@@ -377,34 +384,10 @@ border-radius:20px;
     color:#4fc3ff;
 }
 
-.match-number{
-    font-weight: bold;
-    margin-bottom: 15px;
-    opacity: 0.9;
+.win{
+    color:#00ff88;
 }
 
-.match-row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.team-left,
-.team-right{
-    flex: 1;
-}
-
-.team-left{
-    text-align: left;
-}
-
-.team-right{
-    text-align: right;
-}
-
-.score{
-    min-width: 70px;
-    text-align: center;
-    font-weight: bold;
+.lose{
+    color:#ff0033;
 }
