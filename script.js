@@ -8,7 +8,7 @@ let openedPlayer = null;
    8 EQUIPES / 24 JOUEURS
 ========================= */
 
-for(let i = 1; i <= 8; i++){
+for(let i = 1; i <= 9; i++){
 
     let teamName;
 
@@ -35,6 +35,9 @@ else if(i === 7){
 }
 else if(i === 8){
     teamName = "CFti";
+}
+else if(i === 9){
+    teamName = "Los Pingüinos";
 }
 else{
     teamName = "Team " + i;
@@ -103,6 +106,13 @@ else if(i === 7){
     if(j === 3) playerName = "Kurapika";
 
 }
+else if(i === 9){
+
+    if(j === 1) playerName = "Kawazaki";
+    if(j === 2) playerName = "Cago";
+    if(j === 3) playerName = "Estriper";
+
+}
 else{
 
     playerName = `T${i}P${j}`;
@@ -111,7 +121,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 14; m++){
+        for(let m = 1; m <= 16; m++){
 
             history.push({
                 match:m,
