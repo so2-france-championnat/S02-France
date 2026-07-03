@@ -295,42 +295,42 @@ background:rgba(255,0,51,0.08);
 /* HOME BANNER */
 
 .home-banner{
-margin-top:20px;
-border-radius:20px;
-overflow:hidden;
-background:rgba(255,255,255,0.03);
-box-shadow:0 0 25px rgba(0,140,255,0.15);
+    margin-top:20px;
+    border-radius:20px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.03);
+    box-shadow:0 0 25px rgba(0,140,255,0.15);
 }
 
 .home-banner img{
-width:100%;
-display:block;
-border-radius:20px;
+    width:100%;
+    display:block;
+    border-radius:20px;
 }
 
 .rank1-points{
-    color: gold;
-    font-weight: bold;
+    color:gold;
+    font-weight:bold;
 }
 
 .rank2-points{
-    color: silver;
-    font-weight: bold;
+    color:silver;
+    font-weight:bold;
 }
 
 .rank3-points{
-    color: #cd7f32;
-    font-weight: bold;
+    color:#cd7f32;
+    font-weight:bold;
 }
 
 .rank-blue-points{
-    color: #008cff;
-    font-weight: bold;
+    color:#008cff;
+    font-weight:bold;
 }
 
 .rank-red-points{
-    color: #ff0033;
-    font-weight: bold;
+    color:#ff0033;
+    font-weight:bold;
 }
 
 .ranking-card{
@@ -350,32 +350,45 @@ border-radius:20px;
     white-space:nowrap;
 }
 
+/* MATCHES */
+
 .match-card{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+    padding:16px;
 }
 
 .match-number{
-    font-size:20px;
+    font-size:18px;
     font-weight:bold;
     color:white;
+    margin-bottom:12px;
 }
 
-.match-team1{
+.match-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.team-left,
+.team-right{
+    flex:1;
+    font-size:18px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.team-left{
     text-align:left;
-    font-size:24px;
-    font-weight:bold;
 }
 
-.match-score{
-    text-align:center;
-    font-size:28px;
-    font-weight:bold;
-}
-
-.match-team2{
+.team-right{
     text-align:right;
+}
+
+.score{
+    min-width:80px;
+    text-align:center;
     font-size:24px;
     font-weight:bold;
 }
