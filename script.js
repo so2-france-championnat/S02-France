@@ -22,7 +22,7 @@ else if(i === 3){
     teamName = "VALHALLA";
 }
 else if(i === 4){
-    teamName = "Les 3 mousque teh";
+    teamName = "L3MTEH";
 }
 else if(i === 5){
     teamName = "West Fear";
@@ -385,18 +385,22 @@ matches.map((m,i)=>{
         ${i+1}
     </div>
 
-    <div class="match-team1">
-        ${m.t1}
-    </div>
+    <div class="match-row">
 
-    <div class="match-score">
-        <span class="${s1 || 'pending'}">${m.s1}</span>
-        -
-        <span class="${s2 || 'pending'}">${m.s2}</span>
-    </div>
+        <span class="team-left">
+            ${m.t1}
+        </span>
 
-    <div class="match-team2">
-        ${m.t2}
+        <span class="score">
+            <span class="${s1 || 'pending'}">${m.s1}</span>
+            -
+            <span class="${s2 || 'pending'}">${m.s2}</span>
+        </span>
+
+        <span class="team-right">
+            ${m.t2}
+        </span>
+
     </div>
 
 </div>
