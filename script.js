@@ -3,6 +3,7 @@ let players = [];
 let matches = [];
 
 let openedPlayer = null;
+let openedMatchTeam = null;
 
 /* =========================
    8 EQUIPES / 24 JOUEURS
@@ -354,6 +355,17 @@ function togglePlayer(name){
     renderStatsMenu();
 }
 
+function toggleMatchTeam(teamName){
+
+    if(openedMatchTeam === teamName){
+        openedMatchTeam = null;
+    }else{
+        openedMatchTeam = teamName;
+    }
+
+    renderMatches();
+}
+
 /* =========================
    TEAMS
 ========================= */
@@ -377,44 +389,73 @@ function renderTeams(){
 function renderMatches(){
 
     document.getElementById("matchList").innerHTML =
-matches.map((m,i)=>{
+    teams.map(team => {
 
-        let s1 = "";
-        let s2 = "";
-
-        if(m.s1 > m.s2) s1 = "win";
-        if(m.s2 > m.s1) s2 = "win";
-
-        if(m.s1 < m.s2) s1 = "lose";
-        if(m.s2 < m.s1) s2 = "lose";
+        let teamMatches = matches.filter(
+            m => m.t1 === team.name || m.t2 === team.name
+        );
 
         return `
-<div class="card match-card">
+        <div class="card clickable"
+             onclick="toggleMatchTeam('${team.name}')">
 
-    <div class="match-number">
-        ${i+1}
-    </div>
+            <b>${team.name}</b>
 
-    <div class="match-row">
+            ${openedMatchTeam === team.name ? `
 
-        <span class="team-left">
-            ${m.t1}
-        </span>
+                <hr>
 
-        <span class="score">
-            <span class="${s1 || 'pending'}">${m.s1}</span>
-            -
-            <span class="${s2 || 'pending'}">${m.s2}</span>
-        </span>
+                ${teamMatches.map(match => {
 
-        <span class="team-right">
-            ${m.t2}
-        </span>
+                    let matchNumber =
+                        matches.indexOf(match) + 1;
 
-    </div>
+                    let s1 = "";
+                    let s2 = "";
 
-</div>
-`;
+                    if(match.s1 > match.s2) s1 = "win";
+                    if(match.s2 > match.s1) s2 = "win";
+
+                    if(match.s1 < match.s2) s1 = "lose";
+                    if(match.s2 < match.s1) s2 = "lose";
+
+                    return `
+                    <div class="card match-card">
+
+                        <div class="match-number">
+                            Match ${matchNumber}
+                        </div>
+
+                        <div class="match-row">
+
+                            <span class="team-left">
+                                ${match.t1}
+                            </span>
+
+                            <span class="score">
+                                <span class="${s1 || 'pending'}">
+                                    ${match.s1}
+                                </span>
+                                -
+                                <span class="${s2 || 'pending'}">
+                                    ${match.s2}
+                                </span>
+                            </span>
+
+                            <span class="team-right">
+                                ${match.t2}
+                            </span>
+
+                        </div>
+
+                    </div>
+                    `;
+                }).join("")}
+
+            ` : ""}
+
+        </div>
+        `;
     }).join("");
 }
 
