@@ -382,25 +382,21 @@ matches.map((m,i)=>{
 <div class="card match-card">
 
     <div class="match-number">
-        Match ${i+1}
+        ${i+1}
     </div>
 
-    <div class="match-row">
+    <div class="match-team1">
+        ${m.t1}
+    </div>
 
-        <span class="team-left">
-            ${m.t1}
-        </span>
+    <div class="match-score">
+        <span class="${s1 || 'pending'}">${m.s1}</span>
+        -
+        <span class="${s2 || 'pending'}">${m.s2}</span>
+    </div>
 
-        <span class="score">
-            <span class="${s1 || 'pending'}">${m.s1}</span>
-            -
-            <span class="${s2 || 'pending'}">${m.s2}</span>
-        </span>
-
-        <span class="team-right">
-            ${m.t2}
-        </span>
-
+    <div class="match-team2">
+        ${m.t2}
     </div>
 
 </div>
