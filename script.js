@@ -544,6 +544,11 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
 
     if(!match) return;
 
+    // Empêche de compter deux fois le même match
+    if(match.s1 !== 0 || match.s2 !== 0){
+        return;
+    }
+
     // Mise à jour du score
     match.s1 = score1;
     match.s2 = score2;
@@ -582,9 +587,18 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
         player.a += stat[2];
         player.m += stat[3];
 
-        player.history[matchNumber - 1].k = stat[1];
-        player.history[matchNumber - 1].a = stat[2];
-        player.history[matchNumber - 1].d = stat[3];
+        let historyMatch = player.history.find(
+            h => h.opponent === team2.name &&
+                 h.k === 0 &&
+                 h.a === 0 &&
+                 h.d === 0
+        );
+
+        if(historyMatch){
+            historyMatch.k = stat[1];
+            historyMatch.a = stat[2];
+            historyMatch.d = stat[3];
+        }
     });
 
     // Stats équipe 2
@@ -600,9 +614,18 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
         player.a += stat[2];
         player.m += stat[3];
 
-        player.history[matchNumber - 1].k = stat[1];
-        player.history[matchNumber - 1].a = stat[2];
-        player.history[matchNumber - 1].d = stat[3];
+        let historyMatch = player.history.find(
+            h => h.opponent === team1.name &&
+                 h.k === 0 &&
+                 h.a === 0 &&
+                 h.d === 0
+        );
+
+        if(historyMatch){
+            historyMatch.k = stat[1];
+            historyMatch.a = stat[2];
+            historyMatch.d = stat[3];
+        }
     });
 
     renderPlayers();
