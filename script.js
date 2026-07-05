@@ -634,38 +634,6 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
     renderRanking();
 }
 
-updateMatch(
-71,
-4,
-13,
-[
-["Irakli",10,3,16],
-["Zora Ytb",8,1,14],
-["Kurapika",6,1,15]
-],
-[
-["Cago",26,0,5],
-["Kawazaki",15,4,10],
-["Estriper",4,3,9]
-]
-);
-
-updateMatch(
-72,
-13,
-4,
-[
-["Cago",20,4,9],
-["Kawazaki",16,1,7],
-["Estriper",8,5,8]
-],
-[
-["Irakli",10,1,15],
-["Zora Ytb",9,0,14],
-["Kurapika",5,0,16]
-]
-);
-
 /* =========================
    INIT
 ========================= */
