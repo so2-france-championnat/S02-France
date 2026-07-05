@@ -397,9 +397,15 @@ function renderMatches(){
 
         return `
         <div class="card clickable"
-             onclick="toggleMatchTeam('${team.name}')">
+     onclick="toggleMatchTeam('${team.name}')">
 
-            <b>${team.name}</b>
+    <div class="match-team-header">
+
+        <img src="${team.logo}" class="match-team-logo">
+
+        <b>${team.name}</b>
+
+    </div>
 
             ${openedMatchTeam === team.name ? `
 
