@@ -404,3 +404,20 @@ background:rgba(255,0,51,0.08);
 .lose{
     color:#ff0033;
 }
+
+.match-team-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.match-team-logo{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+}
