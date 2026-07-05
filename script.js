@@ -256,8 +256,17 @@ function renderPlayers(){
         else if(i <= 17) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
-        return `
-        <div class="card ${rankClass}">
+        let teamLogo = teams.find(t => t.name === p.team).logo;
+
+return `
+<div class="card ${rankClass}">
+
+    <div style="display:flex;align-items:center;gap:12px;">
+
+        <img src="${teamLogo}"
+             style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
+
+        <div>
             ${i+1}. ${p.name} (${p.team})<br>
             K:${p.k} A:${p.a} D:${p.m}<br>
 
@@ -265,7 +274,11 @@ function renderPlayers(){
                 KD ${kd.toFixed(2)}
             </span>
         </div>
-        `;
+
+    </div>
+
+</div>
+`;
     }).join("");
 }
 
@@ -300,12 +313,23 @@ function renderStatsMenu(){
         else if(i <= 17) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
+let teamLogo = teams.find(t => t.name === p.team).logo;
+       
         return `
         <div class="card clickable ${rankClass}"
              onclick="togglePlayer('${p.name}')">
 
-            <b>${i+1}. ${p.name}</b>
-            (${p.team})
+            <div style="display:flex;align-items:center;gap:12px;">
+
+    <img src="${teamLogo}"
+         style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
+
+    <div>
+        <b>${i+1}. ${p.name}</b><br>
+        (${p.team})
+    </div>
+
+</div>
 
             ${openedPlayer === p.name ? `
 
