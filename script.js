@@ -740,8 +740,8 @@ updateMatch(
 
 updateMatch(
 10,
-8,
 13,
+8,
 [
 ["Freezy",21,1,14],
 ["Wanheda",9,3,20],
