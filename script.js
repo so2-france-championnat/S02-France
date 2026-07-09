@@ -122,7 +122,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 72; m++){
+        for(let m = 1; m <= 16; m++){
 
             history.push({
                 match:m,
