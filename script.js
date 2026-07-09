@@ -772,8 +772,8 @@ updateMatch(
 
 updateMatch(
 36,
-0,
 13,
+0,
 [
 ["Ragnar",3,0,13],
 ["Nitsugo",2,0,13],
