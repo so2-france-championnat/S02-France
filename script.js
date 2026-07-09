@@ -198,7 +198,7 @@ teams.forEach(team => {
 
             let match = teamMatches[i];
 
-            player.history[matches.indexOf(match)].opponent =
+            player.history[i].opponent =
                 match.t1 === team.name
                 ? match.t2
                 : match.t1;
@@ -611,10 +611,18 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
         player.a += stat[2];
         player.m += stat[3];
 
-        player.history[matchNumber - 1].opponent = team2.name;
-player.history[matchNumber - 1].k = stat[1];
-player.history[matchNumber - 1].a = stat[2];
-player.history[matchNumber - 1].d = stat[3];
+        let historyMatch = player.history.find(
+            h => h.opponent === team2.name &&
+                 h.k === 0 &&
+                 h.a === 0 &&
+                 h.d === 0
+        );
+
+        if(historyMatch){
+            historyMatch.k = stat[1];
+            historyMatch.a = stat[2];
+            historyMatch.d = stat[3];
+        }
     });
 
     // Stats équipe 2
@@ -630,10 +638,18 @@ player.history[matchNumber - 1].d = stat[3];
         player.a += stat[2];
         player.m += stat[3];
 
-        player.history[matchNumber - 1].opponent = team1.name;
-player.history[matchNumber - 1].k = stat[1];
-player.history[matchNumber - 1].a = stat[2];
-player.history[matchNumber - 1].d = stat[3];
+        let historyMatch = player.history.find(
+            h => h.opponent === team1.name &&
+                 h.k === 0 &&
+                 h.a === 0 &&
+                 h.d === 0
+        );
+
+        if(historyMatch){
+            historyMatch.k = stat[1];
+            historyMatch.a = stat[2];
+            historyMatch.d = stat[3];
+        }
     });
 
     renderPlayers();
@@ -759,14 +775,14 @@ updateMatch(
 13,
 0,
 [
-["Ragnar",3,0,13],
-["Nitsugo",2,0,13],
-["Titan",1,0,13]
-],
-[
 ["Homn",14,3,3],
 ["HorizoN",12,3,2],
 ["Suzuki",13,0,1]
+],
+[
+["Ragnar",3,0,13],
+["Nitsugo",2,0,13],
+["Titan",1,0,13]
 ]
 );
 
