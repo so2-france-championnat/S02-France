@@ -795,11 +795,19 @@ allPlayers.forEach(stat => {
     let statKD = stat[1] / (stat[3] || 1);
 
     if(
-        stat[1] > best[1] ||
+        statKD > bestKD ||
+
         (
+            statKD === bestKD &&
+            stat[1] > best[1]
+        ) ||
+
+        (
+            statKD === bestKD &&
             stat[1] === best[1] &&
-            statKD > bestKD
+            stat[2] > best[2]
         )
+
     ){
         best = stat;
     }
