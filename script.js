@@ -62,7 +62,7 @@ else{
 else if(i === 2){
 
     if(j === 1) playerName = "Lethalvirus21";
-    if(j === 2) playerName = "Yazor";
+    if(j === 2) playerName = "Ylix";
     if(j === 3) playerName = "Zywoo";
 
 }
