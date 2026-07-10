@@ -317,7 +317,7 @@ function renderStatsMenu(){
 let teamLogo = teams.find(t => t.name === p.team).logo;
        
         return `
-        <div class="card clickable ${rankClass}"
+        <div class="card clickable ${rankClass} ${openedPlayer === p.name ? 'player-open' : ''}"
              onclick="togglePlayer('${p.name}')">
 
             <div style="display:flex;align-items:center;gap:12px;">
