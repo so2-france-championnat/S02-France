@@ -167,18 +167,20 @@ for(let i = 0; i < teams.length; i++){
     for(let j = i + 1; j < teams.length; j++){
 
         matches.push({
-            t1:teams[i].name,
-            t2:teams[j].name,
-            s1:0,
-            s2:0
-        });
+    t1:teams[i].name,
+    t2:teams[j].name,
+    s1:0,
+    s2:0,
+    mvp:null
+});
 
         matches.push({
-            t1:teams[j].name,
-            t2:teams[i].name,
-            s1:0,
-            s2:0
-        });
+    t1:teams[j].name,
+    t2:teams[i].name,
+    s1:0,
+    s2:0,
+    mvp:null
+});
 
     }
 }
@@ -501,37 +503,107 @@ function renderMatches(){
                     if(match.s1 < match.s2) s1 = "lose";
                     if(match.s2 < match.s1) s2 = "lose";
 
+                   let teamWon =
+    (match.t1 === team.name && match.s1 > match.s2) ||
+    (match.t2 === team.name && match.s2 > match.s1);
+
+let resultText = "";
+
+if(match.s1 !== 0 || match.s2 !== 0){
+    resultText = teamWon ? "WIN" : "LOSS";
+}
+
+let borderColor =
+    resultText === "WIN"
+        ? "#22c55e"
+        : resultText === "LOSS"
+        ? "#ef4444"
+        : "transparent";
+
                     return `
-                    <div class="card match-card">
+<div class="card match-card" style="
+border:2px solid ${borderColor};
+box-shadow:0 0 12px ${borderColor};
+">
 
-                        <div class="match-number">
-                            Match ${matchNumber}
-                        </div>
+    <div style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;">
 
-                        <div class="match-row">
+        <div class="match-number">
+            Match ${matchNumber}
+        </div>
 
-                            <span class="team-left">
-                                ${match.t1}
-                            </span>
+        ${
+            resultText
+            ? `<span style="
+                color:${borderColor};
+                font-weight:bold;
+                font-size:15px;">
+                ${resultText}
+               </span>`
+            : ""
+        }
 
-                            <span class="score">
-                                <span class="${s1 || 'pending'}">
-                                    ${match.s1}
-                                </span>
-                                -
-                                <span class="${s2 || 'pending'}">
-                                    ${match.s2}
-                                </span>
-                            </span>
+    </div>
 
-                            <span class="team-right">
-                                ${match.t2}
-                            </span>
+    <div class="match-row">
 
-                        </div>
+        <span class="team-left">
+            ${match.t1}
+        </span>
 
-                    </div>
-                    `;
+        <span class="score">
+            <span class="${s1 || 'pending'}">
+                ${match.s1}
+            </span>
+            -
+            <span class="${s2 || 'pending'}">
+                ${match.s2}
+            </span>
+        </span>
+
+        <span class="team-right">
+            ${match.t2}
+        </span>
+
+    </div>
+
+    ${
+        match.mvp
+        ? `
+        <hr>
+
+        <div style="margin-top:12px;">
+
+            <div style="
+            font-size:18px;
+            font-weight:bold;
+            margin-bottom:6px;">
+                👑 ${match.mvp.name}
+            </div>
+
+            <div>
+                ${match.mvp.k} K •
+                ${match.mvp.a} A •
+                ${match.mvp.d} D •
+
+                <span style="
+                color:gold;
+                font-weight:bold;">
+                    KD ${match.mvp.kd}
+                </span>
+            </div>
+
+        </div>
+        `
+        : ""
+    }
+
+</div>
+`;
                 }).join("")}
 
             ` : ""}
@@ -706,6 +778,42 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
         }
     });
 
+// =========================
+// MVP AUTOMATIQUE
+// =========================
+
+let allPlayers = [
+    ...stats1,
+    ...stats2
+];
+
+let best = allPlayers[0];
+
+allPlayers.forEach(stat => {
+
+    let bestKD = best[1] / (best[3] || 1);
+    let statKD = stat[1] / (stat[3] || 1);
+
+    if(
+        stat[1] > best[1] ||
+        (
+            stat[1] === best[1] &&
+            statKD > bestKD
+        )
+    ){
+        best = stat;
+    }
+
+});
+
+match.mvp = {
+    name: best[0],
+    k: best[1],
+    a: best[2],
+    d: best[3],
+    kd: (best[1] / (best[3] || 1)).toFixed(2)
+};
+   
     renderPlayers();
     renderStatsMenu();
     renderMatches();
