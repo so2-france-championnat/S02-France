@@ -349,23 +349,33 @@ let teamLogo = teams.find(t => t.name === p.team).logo;
 
                 ${p.history.map(match=>`
     <div class="card" style="
-        margin-top:10px;
-        border:2px solid ${
-            match.result === "WIN"
-                ? "#22c55e"
-                : match.result === "LOSS"
+    margin-top:10px;
+    position:relative;
+    overflow:hidden;
+    border:2px solid ${
+        match.result === "WIN"
+            ? "#22c55e"
+            : match.result === "LOSS"
                 ? "#ef4444"
                 : "transparent"
-        };
-        box-shadow:0 0 12px ${
+    };
+">
+
+    <div style="
+        position:absolute;
+        inset:0;
+        pointer-events:none;
+        border-radius:inherit;
+        box-shadow:inset 0 0 18px ${
             match.result === "WIN"
-                ? "rgba(34,197,94,.35)"
+                ? "rgba(34,197,94,.45)"
                 : match.result === "LOSS"
-                ? "rgba(239,68,68,.35)"
-                : "transparent"
+                    ? "rgba(239,68,68,.45)"
+                    : "transparent"
         };
-    ">
-        Match ${match.match}<br>
+    "></div>
+
+    Match ${match.match}<br>
 
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
 
