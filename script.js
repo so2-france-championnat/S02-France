@@ -347,15 +347,23 @@ let teamLogo = teams.find(t => t.name === p.team).logo;
                 <hr>
 
                 ${p.history.map(match=>`
-                    <div class="card" style="margin-top:10px;">
-                        Match ${match.match}<br>
-                        vs ${match.opponent}<br><br>
+    <div class="card" style="margin-top:10px;">
+        Match ${match.match}<br>
 
-                        ${match.k} K<br>
-                        ${match.a} A<br>
-                        ${match.d} D
-                    </div>
-                `).join("")}
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <span>vs ${match.opponent}</span>
+
+            <img src="${teams.find(t => t.name === match.opponent)?.logo}"
+                 width="32"
+                 height="32"
+                 style="border-radius:50%;object-fit:cover;">
+        </div>
+
+        ${match.k} K<br>
+        ${match.a} A<br>
+        ${match.d} D
+    </div>
+`).join("")}
 
             ` : ""}
 
