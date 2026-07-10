@@ -421,3 +421,7 @@ background:rgba(255,0,51,0.08);
     border-radius:50%;
     object-fit:cover;
 }
+
+.player-open{
+    margin-bottom:24px;
+}
