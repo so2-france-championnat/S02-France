@@ -125,12 +125,13 @@ let history = [];
         for(let m = 1; m <= 16; m++){
 
             history.push({
-                match:m,
-                opponent:"TBD",
-                k:0,
-                a:0,
-                d:0
-            });
+    match:m,
+    opponent:"TBD",
+    k:0,
+    a:0,
+    d:0,
+    result:""
+});
 
         }
 
@@ -347,17 +348,50 @@ let teamLogo = teams.find(t => t.name === p.team).logo;
                 <hr>
 
                 ${p.history.map(match=>`
-    <div class="card" style="margin-top:10px;">
+    <div class="card" style="
+        margin-top:10px;
+        border:2px solid ${
+            match.result === "WIN"
+                ? "#22c55e"
+                : match.result === "LOSS"
+                ? "#ef4444"
+                : "transparent"
+        };
+        box-shadow:0 0 12px ${
+            match.result === "WIN"
+                ? "rgba(34,197,94,.35)"
+                : match.result === "LOSS"
+                ? "rgba(239,68,68,.35)"
+                : "transparent"
+        };
+    ">
         Match ${match.match}<br>
 
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-            <span>vs ${match.opponent}</span>
 
-            <img src="${teams.find(t => t.name === match.opponent)?.logo}"
-                 width="32"
-                 height="32"
-                 style="border-radius:50%;object-fit:cover;">
-        </div>
+    <span>vs ${match.opponent}</span>
+
+    <div style="display:flex;align-items:center;gap:8px;">
+
+        ${
+    match.result
+    ? `<span style="
+        color:${match.result==="WIN" ? "#22c55e" : "#ef4444"};
+        font-size:11px;
+        font-weight:bold;">
+        ${match.result}
+      </span>`
+    : ""
+}
+
+        <img src="${teams.find(t => t.name === match.opponent)?.logo}"
+             width="32"
+             height="32"
+             style="border-radius:50%;object-fit:cover;">
+
+    </div>
+
+</div>
 
         ${match.k} K<br>
         ${match.a} A<br>
@@ -630,6 +664,7 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
             historyMatch.k = stat[1];
             historyMatch.a = stat[2];
             historyMatch.d = stat[3];
+           historyMatch.result = score1 === 13 ? "WIN" : "LOSS";
         }
     });
 
@@ -657,6 +692,7 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
             historyMatch.k = stat[1];
             historyMatch.a = stat[2];
             historyMatch.d = stat[3];
+           historyMatch.result = score2 === 13 ? "WIN" : "LOSS";
         }
     });
 
