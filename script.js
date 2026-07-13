@@ -97,7 +97,7 @@ else if(i === 6){
 else if(i === 7){
 
     if(j === 1) playerName = "Manji";
-    if(j === 2) playerName = "Akaza";
+    if(j === 2) playerName = "Stronex";
     if(j === 3) playerName = "Tata";
 
 }else if(i === 8){
