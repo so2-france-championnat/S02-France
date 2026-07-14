@@ -1009,7 +1009,6 @@ updateMatch(
 5,
 13,
 [
-
 [
 ["Stronex",9,1,15],
 ["Manji",7,4,14],
