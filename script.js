@@ -17,7 +17,7 @@ if(i === 1){
     teamName = "GrizzlySDBT";
 }
 else if(i === 2){
-    teamName = "Bozkurt";
+    teamName = "Vicious9";
 }
 else if(i === 3){
     teamName = "VALHALLA";
@@ -61,9 +61,9 @@ else{
 }
 else if(i === 2){
 
-    if(j === 1) playerName = "Lethalvirus21";
-    if(j === 2) playerName = "Ylix";
-    if(j === 3) playerName = "Zywoo";
+    if(j === 1) playerName = "Alwock";
+    if(j === 2) playerName = "Smu";
+    if(j === 3) playerName = "Astro";
 
 }
 else if(i === 3){
