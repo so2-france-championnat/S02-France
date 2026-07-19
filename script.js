@@ -83,8 +83,8 @@ else if(i === 4){
 else if(i === 5){
 
     if(j === 1) playerName = "Akra";
-    if(j === 2) playerName = "Tarinx";
-    if(j === 3) playerName = "Rijin";
+    if(j === 2) playerName = "Kallow";
+    if(j === 3) playerName = "Ciseaux";
 
 }
 else if(i === 6){
