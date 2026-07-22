@@ -23,7 +23,7 @@ else if(i === 3){
     teamName = "VitriX";
 }
 else if(i === 4){
-    teamName = "Team 4";
+    teamName = "Grizzly SDBT";
 }
 else if(i === 5){
     teamName = "Team 5";
@@ -81,10 +81,10 @@ else if(i === 3){
 }
 else if(i === 4){
 
-    if(j === 1) playerName = "T4P1";
-    if(j === 2) playerName = "T4P2";
-    if(j === 3) playerName = "T4P3";
-    if(j === 4) playerName = "T4P4";
+    if(j === 1) playerName = "Freezy";
+    if(j === 2) playerName = "Youko";
+    if(j === 3) playerName = "Wanheda";
+    if(j === 4) playerName = "ZoraYtB";
 
 }
 else if(i === 5){
