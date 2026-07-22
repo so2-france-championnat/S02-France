@@ -14,13 +14,13 @@ for(let i = 1; i <= 10; i++){
     let teamName;
 
 if(i === 1){
-    teamName = "Team 1";
+    teamName = "BussGang";
 }
 else if(i === 2){
-    teamName = "Team 2";
+    teamName = "Nexus";
 }
 else if(i === 3){
-    teamName = "Team 3";
+    teamName = "VitriX";
 }
 else if(i === 4){
     teamName = "Team 4";
@@ -57,26 +57,26 @@ else{
 
         if(i === 1){
 
-    if(j === 1) playerName = "T1P1";
-    if(j === 2) playerName = "T1P2";
-    if(j === 3) playerName = "T1P3";
+    if(j === 1) playerName = "Akra";
+    if(j === 2) playerName = "Homn";
+    if(j === 3) playerName = "Suzuki";
     if(j === 4) playerName = "T1P4";
 
 }
 else if(i === 2){
 
-    if(j === 1) playerName = "T2P1";
-    if(j === 2) playerName = "T2P2";
-    if(j === 3) playerName = "T2P3";
+    if(j === 1) playerName = "V1P3R";
+    if(j === 2) playerName = "Gabin15";
+    if(j === 3) playerName = "LaynOx";
     if(j === 4) playerName = "T2P4";
 
 }
 else if(i === 3){
 
-    if(j === 1) playerName = "T3P1";
-    if(j === 2) playerName = "T3P2";
-    if(j === 3) playerName = "T3P3";
-    if(j === 4) playerName = "T3P4";
+    if(j === 1) playerName = "Loic";
+    if(j === 2) playerName = "Bri";
+    if(j === 3) playerName = "Kazero";
+    if(j === 4) playerName = "Nounours";
 
 }
 else if(i === 4){
