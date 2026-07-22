@@ -468,7 +468,9 @@ function renderTeams(){
         <div class="card">
             <img src="${t.logo}" width="35">
             <b>${t.name}</b><br>
-            👥 ${t.players.slice(0,3).join(" • ")} 🔄 ${t.players[3]}
+
+            👥 ${t.players.slice(0,3).join(" • ")}<br>
+            🔄 ${t.players[3]}
         </div>
     `).join("");
 }
