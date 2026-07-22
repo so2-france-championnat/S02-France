@@ -9,7 +9,7 @@ let openedMatchTeam = null;
    8 EQUIPES / 24 JOUEURS
 ========================= */
 
-for(let i = 1; i <= 9; i++){
+for(let i = 1; i <= 10; i++){
 
     let teamName;
 
@@ -40,6 +40,9 @@ else if(i === 8){
 else if(i === 9){
     teamName = "Team 9";
 }
+else if(i === 10){
+    teamName = "Team 10"
+}
 else{
     teamName = "Team " + i;
 }
@@ -48,15 +51,18 @@ else{
 
     let teamPlayers = [];
 
-    for(let j = 1; j <= 3; j++){
+    for(let j = 1; j <= 4; j++){
 
         let playerName;
 
         if(i === 1){
 
+    if(i === 1){
+
     if(j === 1) playerName = "T1P1";
     if(j === 2) playerName = "T1P2";
     if(j === 3) playerName = "T1P3";
+    if(j === 4) playerName = "T1P4";
 
 }
 else if(i === 2){
@@ -64,6 +70,7 @@ else if(i === 2){
     if(j === 1) playerName = "T2P1";
     if(j === 2) playerName = "T2P2";
     if(j === 3) playerName = "T2P3";
+    if(j === 4) playerName = "T2P4";
 
 }
 else if(i === 3){
@@ -71,6 +78,7 @@ else if(i === 3){
     if(j === 1) playerName = "T3P1";
     if(j === 2) playerName = "T3P2";
     if(j === 3) playerName = "T3P3";
+    if(j === 4) playerName = "T3P4";
 
 }
 else if(i === 4){
@@ -78,6 +86,7 @@ else if(i === 4){
     if(j === 1) playerName = "T4P1";
     if(j === 2) playerName = "T4P2";
     if(j === 3) playerName = "T4P3";
+    if(j === 4) playerName = "T4P4";
 
 }
 else if(i === 5){
@@ -85,6 +94,7 @@ else if(i === 5){
     if(j === 1) playerName = "T5P1";
     if(j === 2) playerName = "T5P2";
     if(j === 3) playerName = "T5P3";
+    if(j === 4) playerName = "T5P4";
 
 }
 else if(i === 6){
@@ -92,6 +102,7 @@ else if(i === 6){
     if(j === 1) playerName = "T6P1";
     if(j === 2) playerName = "T6P2";
     if(j === 3) playerName = "T6P3";
+    if(j === 4) playerName = "T6P4";
 
 }
 else if(i === 7){
@@ -99,12 +110,15 @@ else if(i === 7){
     if(j === 1) playerName = "T7P1";
     if(j === 2) playerName = "T7P2";
     if(j === 3) playerName = "T7P3";
+    if(j === 4) playerName = "T7P4";
 
-}else if(i === 8){
+}
+else if(i === 8){
 
     if(j === 1) playerName = "T8P1";
     if(j === 2) playerName = "T8P2";
     if(j === 3) playerName = "T8P3";
+    if(j === 4) playerName = "T8P4";
 
 }
 else if(i === 9){
@@ -112,6 +126,15 @@ else if(i === 9){
     if(j === 1) playerName = "T9P1";
     if(j === 2) playerName = "T9P2";
     if(j === 3) playerName = "T9P3";
+    if(j === 4) playerName = "T9P4";
+
+}
+else if(i === 10){
+
+    if(j === 1) playerName = "T10P1";
+    if(j === 2) playerName = "T10P2";
+    if(j === 3) playerName = "T10P3";
+    if(j === 4) playerName = "T10P4";
 
 }
 else{
@@ -122,7 +145,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 8; m++){
+        for(let m = 1; m <= 9; m++){
 
             history.push({
     match:m,
@@ -447,7 +470,7 @@ function renderTeams(){
         <div class="card">
             <img src="${t.logo}" width="35">
             <b>${t.name}</b><br>
-            👥 ${t.players.join(" • ")}
+            👥 ${t.players.slice(0,3).join(" • ")} 🔄 ${t.players[3]}
         </div>
     `).join("");
 }
