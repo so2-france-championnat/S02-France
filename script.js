@@ -57,8 +57,6 @@ else{
 
         if(i === 1){
 
-    if(i === 1){
-
     if(j === 1) playerName = "T1P1";
     if(j === 2) playerName = "T1P2";
     if(j === 3) playerName = "T1P3";
