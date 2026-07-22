@@ -122,7 +122,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 16; m++){
+        for(let m = 1; m <= 8; m++){
 
             history.push({
     match:m,
@@ -167,20 +167,12 @@ for(let i = 0; i < teams.length; i++){
     for(let j = i + 1; j < teams.length; j++){
 
         matches.push({
-    t1:teams[i].name,
-    t2:teams[j].name,
-    s1:0,
-    s2:0,
-    mvp:null
-});
-
-        matches.push({
-    t1:teams[j].name,
-    t2:teams[i].name,
-    s1:0,
-    s2:0,
-    mvp:null
-});
+            t1: teams[i].name,
+            t2: teams[j].name,
+            s1: 0,
+            s2: 0,
+            mvp: null
+        });
 
     }
 }
