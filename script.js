@@ -14,31 +14,31 @@ for(let i = 1; i <= 9; i++){
     let teamName;
 
 if(i === 1){
-    teamName = "GrizzlySDBT";
+    teamName = "Team 1";
 }
 else if(i === 2){
-    teamName = "Nexus";
+    teamName = "Team 2";
 }
 else if(i === 3){
-    teamName = "VALHALLA";
+    teamName = "Team 3";
 }
 else if(i === 4){
-    teamName = "L3MTEH";
+    teamName = "Team 4";
 }
 else if(i === 5){
-    teamName = "West Fear";
+    teamName = "Team 5";
 }
 else if(i === 6){
-    teamName = "Buss Gang";
+    teamName = "Team 6";
 }
 else if(i === 7){
-    teamName = "CP-0";
+    teamName = "Team 7";
 }
 else if(i === 8){
-    teamName = "CFti";
+    teamName = "Team 8";
 }
 else if(i === 9){
-    teamName = "Los Pingüinos";
+    teamName = "Team 9";
 }
 else{
     teamName = "Team " + i;
