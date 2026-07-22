@@ -17,7 +17,7 @@ if(i === 1){
     teamName = "GrizzlySDBT";
 }
 else if(i === 2){
-    teamName = "Vicious9";
+    teamName = "Nexus";
 }
 else if(i === 3){
     teamName = "VALHALLA";
@@ -61,9 +61,9 @@ else{
 }
 else if(i === 2){
 
-    if(j === 1) playerName = "Alwock";
-    if(j === 2) playerName = "Ragequit";
-    if(j === 3) playerName = "Zywoo";
+    if(j === 1) playerName = "Viper";
+    if(j === 2) playerName = "Laynox";
+    if(j === 3) playerName = "Gabin15";
 
 }
 else if(i === 3){
@@ -1017,38 +1017,6 @@ updateMatch(
 ["Loic",18,2,6],
 ["bri",13,4,8],
 ["Nounours",13,3,6]
-]
-);
-
-updateMatch(
-23,
-8,
-13,
-[
-["Ragequit",29,2,14],
-["Alwock",12,2,15],
-["Zywoo",1,2,21]
-],
-[
-["Suzuki",21,0,12],
-["HorizoN",14,8,18],
-["Homn",15,1,12]
-]
-);
-
-updateMatch(
-24,
-13,
-8,
-[
-["HorizoN",21,6,16],
-["Suzuki",16,2,8],
-["Homn",14,4,12]
-],
-[
-["Ragequit",18,4,16],
-["Alwock",15,1,16],
-["Zywoo",3,3,19]
 ]
 );
 
