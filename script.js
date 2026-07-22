@@ -269,7 +269,7 @@ function renderPlayers(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 17) rankClass = "player-rank-blue";
+        else if(i <= 31) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
         let teamLogo = teams.find(t => t.name === p.team).logo;
@@ -326,7 +326,7 @@ function renderStatsMenu(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 17) rankClass = "player-rank-blue";
+        else if(i <= 31) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
 let teamLogo = teams.find(t => t.name === p.team).logo;
@@ -666,7 +666,7 @@ function renderRanking(){
             cls = "rank3";
             ptsClass = "rank3-points";
         }
-        else if(i <= 5){
+        else if(i <= 7){
             cls = "rank-blue";
             ptsClass = "rank-blue-points";
         }
