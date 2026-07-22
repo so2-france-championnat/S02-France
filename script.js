@@ -84,7 +84,7 @@ else if(i === 5){
 
     if(j === 1) playerName = "T5P1";
     if(j === 2) playerName = "T5P2";
-    if(j === 3) playerName = "T5P2";
+    if(j === 3) playerName = "T5P3";
 
 }
 else if(i === 6){
