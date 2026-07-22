@@ -54,64 +54,64 @@ else{
 
         if(i === 1){
 
-    if(j === 1) playerName = "Freezy";
-    if(j === 2) playerName = "Wanheda";
-    if(j === 3) playerName = "Youko";
+    if(j === 1) playerName = "T1P1";
+    if(j === 2) playerName = "T1P2";
+    if(j === 3) playerName = "T1P3";
 
 }
 else if(i === 2){
 
-    if(j === 1) playerName = "Viper";
-    if(j === 2) playerName = "Laynox";
-    if(j === 3) playerName = "Gabin15";
+    if(j === 1) playerName = "T2P1";
+    if(j === 2) playerName = "T2P2";
+    if(j === 3) playerName = "T2P3";
 
 }
 else if(i === 3){
 
-    if(j === 1) playerName = "Ragnar";
-    if(j === 2) playerName = "Nitsugo";
-    if(j === 3) playerName = "Titan";
+    if(j === 1) playerName = "T3P1";
+    if(j === 2) playerName = "T3P2";
+    if(j === 3) playerName = "T3P3";
 
 }
 else if(i === 4){
 
-    if(j === 1) playerName = "Loic";
-    if(j === 2) playerName = "bri";
-    if(j === 3) playerName = "Nounours";
+    if(j === 1) playerName = "T4P1";
+    if(j === 2) playerName = "T4P2";
+    if(j === 3) playerName = "T4P3";
 
 }
 else if(i === 5){
 
-    if(j === 1) playerName = "Akra";
-    if(j === 2) playerName = "Kallow";
-    if(j === 3) playerName = "Ciseaux";
+    if(j === 1) playerName = "T5P1";
+    if(j === 2) playerName = "T5P2";
+    if(j === 3) playerName = "T5P2";
 
 }
 else if(i === 6){
 
-    if(j === 1) playerName = "Homn";
-    if(j === 2) playerName = "Suzuki";
-    if(j === 3) playerName = "HorizoN";
+    if(j === 1) playerName = "T6P1";
+    if(j === 2) playerName = "T6P2";
+    if(j === 3) playerName = "T6P3";
 
 }
 else if(i === 7){
 
-    if(j === 1) playerName = "Manji";
-    if(j === 2) playerName = "Stronex";
-    if(j === 3) playerName = "Tata";
+    if(j === 1) playerName = "T7P1";
+    if(j === 2) playerName = "T7P2";
+    if(j === 3) playerName = "T7P3";
 
 }else if(i === 8){
 
-    if(j === 1) playerName = "Irakli";
-    if(j === 2) playerName = "Zora Ytb";
-    if(j === 3) playerName = "Kurapika";
+    if(j === 1) playerName = "T8P1";
+    if(j === 2) playerName = "T8P2";
+    if(j === 3) playerName = "T8P3";
 
 }
 else if(i === 9){
 
-    if(j === 1) playerName = "Kawazaki";
-    if(j === 2) playerName = "Cago";
-    if(j === 3) playerName = "Estriper";
+    if(j === 1) playerName = "T9P1";
+    if(j === 2) playerName = "T9P2";
+    if(j === 3) playerName = "T9P3";
 
 }
 else{
