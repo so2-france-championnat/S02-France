@@ -9,7 +9,7 @@ let openedMatchTeam = null;
    8 EQUIPES / 24 JOUEURS
 ========================= */
 
-for(let i = 1; i <= 10; i++){
+for(let i = 1; i <= 6; i++){
 
     let teamName;
 
@@ -30,18 +30,6 @@ else if(i === 5){
 }
 else if(i === 6){
     teamName = "CP-0";
-}
-else if(i === 7){
-    teamName = "Team 7";
-}
-else if(i === 8){
-    teamName = "Team 8";
-}
-else if(i === 9){
-    teamName = "Team 9";
-}
-else if(i === 10){
-    teamName = "Team 10"
 }
 else{
     teamName = "Team " + i;
@@ -103,38 +91,7 @@ else if(i === 6){
     if(j === 4) playerName = "T6P4";
 
 }
-else if(i === 7){
 
-    if(j === 1) playerName = "T7P1";
-    if(j === 2) playerName = "T7P2";
-    if(j === 3) playerName = "T7P3";
-    if(j === 4) playerName = "T7P4";
-
-}
-else if(i === 8){
-
-    if(j === 1) playerName = "T8P1";
-    if(j === 2) playerName = "T8P2";
-    if(j === 3) playerName = "T8P3";
-    if(j === 4) playerName = "T8P4";
-
-}
-else if(i === 9){
-
-    if(j === 1) playerName = "T9P1";
-    if(j === 2) playerName = "T9P2";
-    if(j === 3) playerName = "T9P3";
-    if(j === 4) playerName = "T9P4";
-
-}
-else if(i === 10){
-
-    if(j === 1) playerName = "T10P1";
-    if(j === 2) playerName = "T10P2";
-    if(j === 3) playerName = "T10P3";
-    if(j === 4) playerName = "T10P4";
-
-}
 else{
 
     playerName = `T${i}P${j}`;
@@ -143,7 +100,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 9; m++){
+        for(let m = 1; m <= 10; m++){
 
             history.push({
     match:m,
@@ -187,15 +144,26 @@ for(let i = 0; i < teams.length; i++){
 
     for(let j = i + 1; j < teams.length; j++){
 
+        // Aller
         matches.push({
             t1: teams[i].name,
             t2: teams[j].name,
-            s1: 0,
-            s2: 0,
-            mvp: null
+            s1:0,
+            s2:0,
+            mvp:null
+        });
+
+        // Retour
+        matches.push({
+            t1: teams[j].name,
+            t2: teams[i].name,
+            s1:0,
+            s2:0,
+            mvp:null
         });
 
     }
+
 }
 
 teams.forEach(team => {
@@ -269,7 +237,7 @@ function renderPlayers(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 31) rankClass = "player-rank-blue";
+        else if(i <= 14) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
         let teamLogo = teams.find(t => t.name === p.team).logo;
@@ -326,7 +294,7 @@ function renderStatsMenu(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 31) rankClass = "player-rank-blue";
+        else if(i <= 14) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
 let teamLogo = teams.find(t => t.name === p.team).logo;
@@ -666,7 +634,7 @@ function renderRanking(){
             cls = "rank3";
             ptsClass = "rank3-points";
         }
-        else if(i <= 7){
+        else if(i <= 4){
             cls = "rank-blue";
             ptsClass = "rank-blue-points";
         }
