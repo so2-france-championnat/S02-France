@@ -62,9 +62,9 @@ for(let j = 1; j <= nbJoueurs; j++){
 }
 else if(i === 2){
 
-    if(j === 1) playerName = "V1P3R";
+    if(j === 1) playerName = "LaynOx";
     if(j === 2) playerName = "Gabin15";
-    if(j === 3) playerName = "LaynOx";
+    if(j === 3) playerName = "On1zuka";
     if(j === 4) playerName = "T2P4";
 
 }
