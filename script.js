@@ -39,7 +39,16 @@ else{
 
     let teamPlayers = [];
 
-    for(let j = 1; j <= 4; j++){
+    let nbJoueurs = 4;
+
+if(i === 1) nbJoueurs = 3; // BussGang
+if(i === 2) nbJoueurs = 3; // Nexus
+if(i === 3) nbJoueurs = 4; // VitriX
+if(i === 4) nbJoueurs = 4; // Grizzly SDBT
+if(i === 5) nbJoueurs = 3; // Vortex
+if(i === 6) nbJoueurs = 3; // CP-0
+
+for(let j = 1; j <= nbJoueurs; j++){
 
         let playerName;
 
@@ -437,8 +446,8 @@ function renderTeams(){
             <img src="${t.logo}" width="35">
             <b>${t.name}</b><br>
 
-            👥 ${t.players.slice(0,3).join(" • ")}<br>
-            🔄 ${t.players[3]}
+            👥 ${t.players.slice(0,3).join(" • ")}
+${t.players[3] ? `<br>🔄 ${t.players[3]}` : ""}
         </div>
     `).join("");
 }
