@@ -665,7 +665,7 @@ function renderRanking(){
             cls = "rank3";
             ptsClass = "rank3-points";
         }
-        else if(i <= 5){
+        else if(i <= 6){
             cls = "rank-blue";
             ptsClass = "rank-blue-points";
         }
