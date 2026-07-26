@@ -842,7 +842,41 @@ match.mvp = {
     renderRanking();
 }
 
+updateMatch(1, 13, 2,
+[
+    ["Akra",19,1,5],
+    ["Suzuki",13,3,6],
+    ["Homn",10,2,5]
+],
+[
+    ["On1zuka",9,1,14],
+    ["LaynOx",4,0,14],
+    ["Gabin15",3,1,14]
+]);
 
+updateMatch(2, 5, 13,
+[
+    ["On1zuka",13,4,14],
+    ["Gabin15",7,0,17],
+    ["LaynOx",4,2,15]
+],
+[
+    ["Akra",20,7,7],
+    ["Suzuki",17,4,9],
+    ["Homn",8,3,8]
+]);
+
+updateMatch(45, 9, 13,
+[
+    ["Sharko",18,2,17],
+    ["Manji",11,3,18],
+    ["Tata",7,3,16]
+],
+[
+    ["Narvalow",24,4,10],
+    ["Kurapika",15,2,15],
+    ["Stronex",12,2,12]
+]);
 
 /* =========================
    INIT
