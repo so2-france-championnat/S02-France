@@ -9,7 +9,7 @@ let openedMatchTeam = null;
    8 EQUIPES / 24 JOUEURS
 ========================= */
 
-for(let i = 1; i <= 6; i++){
+for(let i = 1; i <= 7; i++){
 
     let teamName;
 
@@ -30,6 +30,11 @@ else if(i === 5){
 }
 else if(i === 6){
     teamName = "CP-0";
+
+}
+else if(i === 7){
+    teamName = "NSRP";
+   
 }
 else{
     teamName = "Team " + i;
@@ -99,6 +104,14 @@ else if(i === 6){
     if(j === 3) playerName = "Sharko";
     if(j === 4) playerName = "T6P4";
 
+}
+else if(i === 7){
+
+    if(j === 1) playerName = "Nistugo";
+    if(j === 2) playerName = "Go Silver";
+    if(j === 3) playerName = "Ragnar";
+    if(j === 4) playerName = "PickixBack";
+   
 }
 
 else{
