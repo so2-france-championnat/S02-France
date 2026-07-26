@@ -30,7 +30,6 @@ else if(i === 5){
 }
 else if(i === 6){
     teamName = "CP-0";
-
 }
 else if(i === 7){
     teamName = "NSRP";
