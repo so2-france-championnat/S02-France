@@ -51,7 +51,8 @@ if(i === 3) nbJoueurs = 4; // VitriX
 if(i === 4) nbJoueurs = 4; // Grizzly SDBT
 if(i === 5) nbJoueurs = 3; // Vortex
 if(i === 6) nbJoueurs = 3; // CP-0
-
+if(i === 7) nbJoueurs = 4; // NSRP
+   
 for(let j = 1; j <= nbJoueurs; j++){
 
         let playerName;
@@ -121,7 +122,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 10; m++){
+        for(let m = 1; m <= 12; m++){
 
             history.push({
     match:m,
