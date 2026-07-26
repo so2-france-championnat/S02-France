@@ -33,7 +33,9 @@ else if(i === 6){
 }
 else if(i === 7){
     teamName = "NSRP";
-   
+}
+else if(i === 8){
+    teamName = "Sp4rks"
 }
 else{
     teamName = "Team " + i;
@@ -52,7 +54,7 @@ if(i === 4) nbJoueurs = 4; // Grizzly SDBT
 if(i === 5) nbJoueurs = 3; // Vortex
 if(i === 6) nbJoueurs = 3; // CP-0
 if(i === 7) nbJoueurs = 4; // NSRP
-   
+if(i === 8) nbJoueurs = 3; // Sp4rks 
 for(let j = 1; j <= nbJoueurs; j++){
 
         let playerName;
@@ -113,7 +115,14 @@ else if(i === 7){
     if(j === 4) playerName = "PickixBack";
    
 }
+else if(i === 8){
 
+    if(j === 1) playerName = "OmarBapLO6";
+    if(j === 2) playerName = "Moe Lester";
+    if(j === 3) playerName = "Skiimi";
+
+}
+   
 else{
 
     playerName = `T${i}P${j}`;
@@ -122,7 +131,7 @@ else{
 
 let history = [];
 
-        for(let m = 1; m <= 12; m++){
+        for(let m = 1; m <= 14; m++){
 
             history.push({
     match:m,
@@ -259,7 +268,7 @@ function renderPlayers(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 18) rankClass = "player-rank-blue";
+        else if(i <= 22) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
         let teamLogo = teams.find(t => t.name === p.team).logo;
@@ -316,7 +325,7 @@ function renderStatsMenu(){
         if(i === 0) rankClass = "player-rank1";
         else if(i === 1) rankClass = "player-rank2";
         else if(i === 2) rankClass = "player-rank3";
-        else if(i <= 18) rankClass = "player-rank-blue";
+        else if(i <= 22) rankClass = "player-rank-blue";
         else rankClass = "player-rank-red";
 
 let teamLogo = teams.find(t => t.name === p.team).logo;
