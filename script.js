@@ -468,8 +468,17 @@ function renderTeams(){
             <img src="${t.logo}" width="35">
             <b>${t.name}</b><br>
 
-            👥 ${t.players.slice(0,3).join(" • ")}
-${t.players[3] ? `<br>🔄 ${t.players[3]}` : ""}
+            👥 ${t.players.slice(0,3).map(name =>
+    (name === "Akra" || name === "Manji")
+        ? `<span class="purple-name">${name}</span>`
+        : name
+).join(" • ")}
+
+${t.players[3] ? `<br>🔄 ${
+    t.players[3] === "Akra" || t.players[3] === "Manji"
+        ? `<span class="purple-name">${t.players[3]}</span>`
+        : t.players[3]
+}` : ""}
         </div>
     `).join("");
 }
@@ -596,7 +605,11 @@ box-shadow:0 0 12px ${borderColor};
             font-size:18px;
             font-weight:bold;
             margin-bottom:6px;">
-                👑 ${match.mvp.name}
+                👑 ${
+match.mvp.name === "Akra" || match.mvp.name === "Manji"
+? `<span class="purple-name">${match.mvp.name}</span>`
+: match.mvp.name
+}
             </div>
 
             <div>
