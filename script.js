@@ -48,7 +48,7 @@ else{
     let nbJoueurs = 4;
 
 if(i === 1) nbJoueurs = 3; // BussGang
-if(i === 2) nbJoueurs = 3; // Nexus
+if(i === 2) nbJoueurs = 4; // Nexus
 if(i === 3) nbJoueurs = 4; // VitriX
 if(i === 4) nbJoueurs = 4; // Grizzly SDBT
 if(i === 5) nbJoueurs = 3; // Vortex
@@ -71,8 +71,8 @@ else if(i === 2){
 
     if(j === 1) playerName = "LaynOx";
     if(j === 2) playerName = "Gabin15";
-    if(j === 3) playerName = "On1zuka";
-    if(j === 4) playerName = "T2P4";
+    if(j === 3) playerName = "Qualites";
+    if(j === 4) playerName = "Vlase";
 
 }
 else if(i === 3){
