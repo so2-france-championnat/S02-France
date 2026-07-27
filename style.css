@@ -425,3 +425,9 @@ background:rgba(255,0,51,0.08);
 .player-open{
     margin-bottom:24px;
 }
+
+.purple-name{
+    color:#b84dff;
+    font-weight:bold;
+    text-shadow:0 0 8px #b84dff, 0 0 16px #b84dff;
+}
