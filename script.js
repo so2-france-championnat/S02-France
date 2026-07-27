@@ -282,7 +282,7 @@ return `
              style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
 
         <div>
-            ${i+1}. ${p.name} (${p.team})<br>
+            ${i+1}. <span class="${p.name === 'Akra' || p.name === 'Manji' ? 'purple-name' : ''}">${p.name}</span> (${p.team})<br>
             K:${p.k} A:${p.a} D:${p.m}<br>
 
             <span class="${kdClass}">
@@ -340,7 +340,7 @@ let teamLogo = teams.find(t => t.name === p.team).logo;
          style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
 
     <div>
-        <b>${i+1}. ${p.name}</b><br>
+        <b>${i+1}. <span class="${p.name === 'Akra' || p.name === 'Manji' ? 'purple-name' : ''}">${p.name}</span></b><br>
         (${p.team})
     </div>
 
