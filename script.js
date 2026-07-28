@@ -54,7 +54,7 @@ if(i === 4) nbJoueurs = 4; // Grizzly SDBT
 if(i === 5) nbJoueurs = 3; // Vortex
 if(i === 6) nbJoueurs = 3; // CP-0
 if(i === 7) nbJoueurs = 4; // NSRP
-if(i === 8) nbJoueurs = 3; // Sp4rks 
+if(i === 8) nbJoueurs = 4; // Sp4rks 
 for(let j = 1; j <= nbJoueurs; j++){
 
         let playerName;
@@ -120,7 +120,7 @@ else if(i === 8){
     if(j === 1) playerName = "OmarBapLO6";
     if(j === 2) playerName = "Moe Lester";
     if(j === 3) playerName = "Skiimi";
-
+    if(j === 4) playerName = "Kaitro"
 }
    
 else{
