@@ -939,16 +939,17 @@ updateMatch(23, 13, 4,
     ["Nistugo",5,0,15]
 ]);
 
-updateMatch(24, 13, 5,
-[
-   ["Qualites",22,5,9],
-    ["Gabin15",12,3,7],
-    ["LaynOx",11,1,13]
-],
+updateMatch(24, 5, 13,
 [
     ["Nistugo",11,6,16],
     ["Ragnar",10,2,13],
     ["PickixBack",8,2,16]
+],
+[
+    ["Qualites",22,5,9],
+    ["Gabin15",12,3,7],
+    ["LaynOx",11,1,13]
+    
 ]);
 
 updateMatch(49, 13, 4,
