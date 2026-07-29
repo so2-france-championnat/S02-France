@@ -915,18 +915,6 @@ updateMatch(31, 13, 8,
     ["Tata",6,1,17]
 ]);
 
-updateMatch(24, 4, 13,
-[
-    ["Go Silver",14,1,15],
-    ["Ragnar",5,2,14],
-    ["Nistugo",5,0,15]
-],
-[
-    ["Qualites",21,3,5],
-    ["Gabin15",11,2,11],
-    ["LaynOx",11,2,8]
-]);
-
 updateMatch(23, 13, 4,
 [
     ["Qualites",21,3,5],
