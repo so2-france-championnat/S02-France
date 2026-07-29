@@ -120,7 +120,7 @@ else if(i === 8){
     if(j === 1) playerName = "OmarBapLO6";
     if(j === 2) playerName = "Moe Lester";
     if(j === 3) playerName = "Skiimi";
-    if(j === 4) playerName = "Kaitro"
+    if(j === 4) playerName = "Kitaro"
 }
    
 else{
@@ -891,6 +891,77 @@ updateMatch(45, 13, 9,
     ["Tata",7,3,16]
 ]);
 
+updateMatch(32, 9, 13,
+[
+    ["Manji",19,1,17],
+    ["Sharko",12,4,14],
+    ["Tata",5,1,19]
+],
+[
+    ["Bri",23,5,13],
+    ["Loic",14,2,11],
+    ["Nounours",12,2,12]
+]);
+
+updateMatch(31, 13, 8,
+[
+    ["Loic",15,5,11],
+    ["Bri",17,5,12],
+    ["Nounours",16,4,12]
+],
+[
+    ["Manji",22,2,14],
+    ["Sharko",7,3,17],
+    ["Tata",6,1,17]
+]);
+
+updateMatch(24, 4, 13,
+[
+    ["Go Silver",14,1,15],
+    ["Ragnar",5,2,14],
+    ["Nistugo",5,0,15]
+],
+[
+    ["Qualites",21,3,5],
+    ["Gabin15",11,2,11],
+    ["LaynOx",11,2,8]
+]);
+
+updateMatch(23, 13, 4,
+[
+    ["Qualites",21,3,5],
+    ["Gabin15",11,2,11],
+    ["LaynOx",11,2,8]
+],
+[
+    ["Go Silver",14,1,15],
+    ["Ragnar",5,2,14],
+    ["Nistugo",5,0,15]
+]);
+
+updateMatch(23, 13,5,
+[
+   ["Qualites",22,5,9],
+    ["Gabin15",12,3,7],
+    ["LaynOx",11,1,13]
+],
+[
+    ["Nistugo",11,6,16],
+    ["Ragnar",10,2,13],
+    ["PickixBack",8,2,16]
+]);
+
+updateMatch(49, 13, 4,
+[
+    ["Narvalow",18,2,5],
+    ["Kurapika",16,7,10],
+    ["Stronex",11,3,8]
+],
+[
+    ["Kitaro",8,0,13],
+    ["Moe Lester",11,1,14],
+    ["Skiimi",4,3,17]
+]);
 /* =========================
    INIT
 ========================= */
