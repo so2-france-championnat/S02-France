@@ -5,6 +5,14 @@ let matches = [];
 let openedPlayer = null;
 let openedMatchTeam = null;
 
+const purplePlayers = ["Akra", "Manji", "Nounours"];
+
+function purpleName(name){
+    return purplePlayers.includes(name)
+        ? `<span class="purple-name">${name}</span>`
+        : name;
+}
+
 /* =========================
    8 EQUIPES / 24 JOUEURS
 ========================= */
@@ -282,7 +290,7 @@ return `
              style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
 
         <div>
-            ${i+1}. <span class="${p.name === 'Akra' || p.name === 'Manji' ? 'purple-name' : ''}">${p.name}</span> (${p.team})<br>
+            ${i+1}. ${purpleName(p.name)} (${p.team})<br>
             K:${p.k} A:${p.a} D:${p.m}<br>
 
             <span class="${kdClass}">
@@ -340,7 +348,7 @@ let teamLogo = teams.find(t => t.name === p.team).logo;
          style="width:45px;height:45px;border-radius:50%;object-fit:cover;">
 
     <div>
-        <b>${i+1}. <span class="${p.name === 'Akra' || p.name === 'Manji' ? 'purple-name' : ''}">${p.name}</span></b><br>
+        <b>${i+1}. ${purpleName(p.name)}</b><br>
         (${p.team})
     </div>
 
@@ -468,17 +476,9 @@ function renderTeams(){
             <img src="${t.logo}" width="35">
             <b>${t.name}</b><br>
 
-            👥 ${t.players.slice(0,3).map(name =>
-    (name === "Akra" || name === "Manji")
-        ? `<span class="purple-name">${name}</span>`
-        : name
-).join(" • ")}
+            👥 ${t.players.slice(0,3).map(purpleName).join(" • ")}
 
-${t.players[3] ? `<br>🔄 ${
-    t.players[3] === "Akra" || t.players[3] === "Manji"
-        ? `<span class="purple-name">${t.players[3]}</span>`
-        : t.players[3]
-}` : ""}
+${t.players[3] ? `<br>🔄 ${purpleName(t.players[3])}` : ""}
         </div>
     `).join("");
 }
@@ -605,12 +605,7 @@ box-shadow:0 0 12px ${borderColor};
             font-size:18px;
             font-weight:bold;
             margin-bottom:6px;">
-                👑 ${
-match.mvp.name === "Akra" || match.mvp.name === "Manji"
-? `<span class="purple-name">${match.mvp.name}</span>`
-: match.mvp.name
-}
-            </div>
+                👑 ${purpleName(match.mvp.name)}
 
             <div>
                 ${match.mvp.k} K •
