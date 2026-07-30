@@ -85,8 +85,8 @@ else if(i === 2){
 }
 else if(i === 3){
 
-    if(j === 1) playerName = "Loic";
-    if(j === 2) playerName = "Bri";
+    if(j === 1) playerName = "Bri";
+    if(j === 2) playerName = "Loic";
     if(j === 3) playerName = "Nounours";
     if(j === 4) playerName = "T3P4";
 
