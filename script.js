@@ -595,11 +595,11 @@ box-shadow:0 0 12px ${borderColor};
     </div>
 
     ${
-        match.mvp
-        ? `
-        <hr>
+match.mvp
+? `
+<hr>
 
-        <div style="margin-top:12px;">
+<div style="margin-top:12px;">
 
     <div style="
         font-size:18px;
@@ -621,9 +621,9 @@ box-shadow:0 0 12px ${borderColor};
     </div>
 
 </div>
-        `
-        : ""
-    }
+`
+: ""
+}
 
 </div>
 `;
