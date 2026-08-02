@@ -935,17 +935,196 @@ updateMatch(24, 5, 13,
     
 ]);
 
-updateMatch(49, 13, 4,
+updateMatch(13, 13, 0,
 [
-    ["Narvalow",18,2,5],
-    ["Kurapika",16,7,10],
-    ["Stronex",11,3,8]
+    ["Akra",0,0,0],
+    ["Homn",0,0,0],
+    ["Suzuki",0,0,0]
 ],
 [
-    ["Kitaro",8,0,13],
-    ["Moe Lester",11,1,14],
-    ["Skiimi",4,3,17]
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
 ]);
+
+updateMatch(14, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Akra",0,0,0],
+    ["Homn",0,0,0],
+    ["Suzuki",0,0,0]
+]);
+
+updateMatch(25, 13, 0,
+[
+    ["LaynOx",0,0,0],
+    ["Gabin15",0,0,0],
+    ["Qualites",0,0,0],
+    ["Vlase",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(26, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["LaynOx",0,0,0],
+    ["Gabin15",0,0,0],
+    ["Qualites",0,0,0],
+    ["Vlase",0,0,0]
+]);
+
+updateMatch(35, 13, 0,
+[
+    ["Loic",0,0,0],
+    ["Bri",0,0,0],
+    ["Kazero",0,0,0],
+    ["Nounours",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(36, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Loic",0,0,0],
+    ["Bri",0,0,0],
+    ["Kazero",0,0,0],
+    ["Nounours",0,0,0]
+]);
+
+updateMatch(43, 13, 0,
+[
+    ["Freezy",0,0,0],
+    ["Youko",0,0,0],
+    ["Wanheda",0,0,0],
+    ["ZoraYtB",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(44, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Freezy",0,0,0],
+    ["Youko",0,0,0],
+    ["Wanheda",0,0,0],
+    ["ZoraYtB",0,0,0]
+]);
+
+updateMatch(49, 13, 0,
+[
+    ["Narvalow",0,0,0],
+    ["Stronex",0,0,0],
+    ["Kurapika",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(50, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Narvalow",0,0,0],
+    ["Stronex",0,0,0],
+    ["Kurapika",0,0,0]
+]);
+
+updateMatch(53, 13, 0,
+[
+    ["Manji",0,0,0],
+    ["Sharko",0,0,0],
+    ["Tata",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(54, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Manji",0,0,0],
+    ["Sharko",0,0,0],
+    ["Tata",0,0,0]
+]);
+
+updateMatch(55, 13, 0,
+[
+    ["Nistugo",0,0,0],
+    ["Go Silver",0,0,0],
+    ["Ragnar",0,0,0],
+    ["PickixBack",0,0,0]
+],
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+]);
+
+updateMatch(56, 0, 13,
+[
+    ["OmarBapLO6",0,0,0],
+    ["Moe Lester",0,0,0],
+    ["Skiimi",0,0,0],
+    ["Kitaro",0,0,0]
+],
+[
+    ["Nistugo",0,0,0],
+    ["Go Silver",0,0,0],
+    ["Ragnar",0,0,0],
+    ["PickixBack",0,0,0]
+]);
+
 /* =========================
    INIT
 ========================= */
