@@ -148,6 +148,7 @@ let history = [];
     a:0,
     d:0,
     result:""
+    played:false
 });
 
         }
@@ -760,9 +761,7 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
 
         let historyMatch = player.history.find(
             h => h.opponent === team2.name &&
-                 h.k === 0 &&
-                 h.a === 0 &&
-                 h.d === 0
+                 !h.played
         );
 
         if(historyMatch){
@@ -788,16 +787,15 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
 
         let historyMatch = player.history.find(
             h => h.opponent === team1.name &&
-                 h.k === 0 &&
-                 h.a === 0 &&
-                 h.d === 0
+                 !h.played
         );
 
         if(historyMatch){
             historyMatch.k = stat[1];
             historyMatch.a = stat[2];
             historyMatch.d = stat[3];
-           historyMatch.result = score2 === 13 ? "WIN" : "LOSS";
+            historyMatch.result = score2 === 13 ? "WIN" : "LOSS";
+            historyMatch.played = true;
         }
     });
 
@@ -936,196 +934,6 @@ updateMatch(24, 5, 13,
     
 ]);
 
-updateMatch(13, 13, 0,
-[
-    ["Akra",0,0,0],
-    ["Homn",0,0,0],
-    ["Suzuki",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(14, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Akra",0,0,0],
-    ["Homn",0,0,0],
-    ["Suzuki",0,0,0]
-]);
-
-updateMatch(25, 13, 0,
-[
-    ["LaynOx",0,0,0],
-    ["Gabin15",0,0,0],
-    ["Qualites",0,0,0],
-    ["Vlase",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(26, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["LaynOx",0,0,0],
-    ["Gabin15",0,0,0],
-    ["Qualites",0,0,0],
-    ["Vlase",0,0,0]
-]);
-
-updateMatch(35, 13, 0,
-[
-    ["Loic",0,0,0],
-    ["Bri",0,0,0],
-    ["Kazero",0,0,0],
-    ["Nounours",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(36, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Loic",0,0,0],
-    ["Bri",0,0,0],
-    ["Kazero",0,0,0],
-    ["Nounours",0,0,0]
-]);
-
-updateMatch(43, 13, 0,
-[
-    ["Freezy",0,0,0],
-    ["Youko",0,0,0],
-    ["Wanheda",0,0,0],
-    ["ZoraYtB",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(44, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Freezy",0,0,0],
-    ["Youko",0,0,0],
-    ["Wanheda",0,0,0],
-    ["ZoraYtB",0,0,0]
-]);
-
-updateMatch(49, 13, 0,
-[
-    ["Narvalow",0,0,0],
-    ["Stronex",0,0,0],
-    ["Kurapika",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(50, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Narvalow",0,0,0],
-    ["Stronex",0,0,0],
-    ["Kurapika",0,0,0]
-]);
-
-updateMatch(53, 13, 0,
-[
-    ["Manji",0,0,0],
-    ["Sharko",0,0,0],
-    ["Tata",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(54, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Manji",0,0,0],
-    ["Sharko",0,0,0],
-    ["Tata",0,0,0]
-]);
-
-updateMatch(55, 13, 0,
-[
-    ["Nistugo",0,0,0],
-    ["Go Silver",0,0,0],
-    ["Ragnar",0,0,0],
-    ["PickixBack",0,0,0]
-],
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-]);
-
-updateMatch(56, 0, 13,
-[
-    ["OmarBapLO6",0,0,0],
-    ["Moe Lester",0,0,0],
-    ["Skiimi",0,0,0],
-    ["Kitaro",0,0,0]
-],
-[
-    ["Nistugo",0,0,0],
-    ["Go Silver",0,0,0],
-    ["Ragnar",0,0,0],
-    ["PickixBack",0,0,0]
-]);
-
 updateMatch(29, 9, 13,
 [
     ["Loic",21,4,15],
@@ -1153,6 +961,55 @@ updateMatch(30, 5, 13,
 /* =========================
    INIT
 ========================= */
+function forfeitTeam(teamName){
+
+    matches.forEach((match,index)=>{
+
+        // Ne touche pas aux matchs déjà joués
+        if(match.s1 !== 0 || match.s2 !== 0) return;
+
+        if(match.t1 !== teamName && match.t2 !== teamName) return;
+
+        let winner =
+            match.t1 === teamName
+            ? match.t2
+            : match.t1;
+
+        let winnerPlayers = teams.find(t=>t.name===winner).players;
+
+        let loserPlayers = teams.find(t=>t.name===teamName).players;
+
+        if(match.t1 === teamName){
+
+            updateMatch(
+                index+1,
+                0,
+                13,
+
+                loserPlayers.map(p=>[p,0,0,0]),
+                winnerPlayers.map(p=>[p,0,0,0])
+
+            );
+
+        }else{
+
+            updateMatch(
+                index+1,
+                13,
+                0,
+
+                winnerPlayers.map(p=>[p,0,0,0]),
+                loserPlayers.map(p=>[p,0,0,0])
+
+            );
+
+        }
+
+    });
+
+}
+
+forfeitTeam("Sp4rks");
 
 window.onload = () => {
     renderTeams();
