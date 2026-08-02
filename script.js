@@ -147,7 +147,7 @@ let history = [];
     k:0,
     a:0,
     d:0,
-    result:""
+    result:"",
     played:false
 });
 
@@ -768,7 +768,8 @@ function updateMatch(matchNumber, score1, score2, stats1, stats2){
             historyMatch.k = stat[1];
             historyMatch.a = stat[2];
             historyMatch.d = stat[3];
-           historyMatch.result = score1 === 13 ? "WIN" : "LOSS";
+            historyMatch.result = score1 === 13 ? "WIN" : "LOSS";
+            historyMatch.played = true;
         }
     });
 
