@@ -601,25 +601,26 @@ box-shadow:0 0 12px ${borderColor};
 
         <div style="margin-top:12px;">
 
-            <div style="
-            font-size:18px;
-            font-weight:bold;
-            margin-bottom:6px;">
-                👑 ${purpleName(match.mvp.name)}
+    <div style="
+        font-size:18px;
+        font-weight:bold;
+        margin-bottom:6px;">
+        👑 ${purpleName(match.mvp.name)}
+    </div>
 
-            <div>
-                ${match.mvp.k} K •
-                ${match.mvp.a} A •
-                ${match.mvp.d} D •
+    <div>
+        ${match.mvp.k} K •
+        ${match.mvp.a} A •
+        ${match.mvp.d} D •
 
-                <span style="
-                color:gold;
-                font-weight:bold;">
-                    KD ${match.mvp.kd}
-                </span>
-            </div>
+        <span style="
+            color:gold;
+            font-weight:bold;">
+            KD ${match.mvp.kd}
+        </span>
+    </div>
 
-        </div>
+</div>
         `
         : ""
     }
