@@ -1078,3 +1078,247 @@ window.onload = () => {
     renderMatches();
     renderRanking();
 };
+
+/* =====================================================
+   🐇 ARG — ARCHIVE DU LAPIN BLANC
+===================================================== */
+
+const RABBIT_FINAL_CODE = "V3R-5U1-7ER-R3U";
+
+const rabbitCode = document.getElementById("rabbitCode");
+const rabbitAccess = document.getElementById("rabbitAccess");
+const rabbitStatus = document.getElementById("rabbitStatus");
+
+const rabbitProgress = document.getElementById("rabbitProgress");
+const rabbitProgressBar = document.getElementById("rabbitProgressBar");
+const rabbitProgressText = document.getElementById("rabbitProgressText");
+const rabbitPercent = document.getElementById("rabbitPercent");
+
+const archivePanel = document.getElementById("archivePanel");
+const rabbitUnlocked = document.getElementById("rabbitUnlocked");
+
+
+/* =========================
+   NORMALISATION
+========================= */
+
+function normalizeRabbitCode(value){
+
+    return value
+        .trim()
+        .toUpperCase()
+        .replace(/\s/g,"");
+
+}
+
+
+/* =========================
+   VÉRIFICATION
+========================= */
+
+function verifyRabbitCode(){
+
+    const entered =
+        normalizeRabbitCode(rabbitCode.value);
+
+    if(!entered){
+
+        rabbitStatus.textContent =
+            "STATUS: ENTER A CODE";
+
+        rabbitStatus.style.color =
+            "#ff0033";
+
+        return;
+    }
+
+
+    if(entered !== RABBIT_FINAL_CODE){
+
+        rabbitStatus.textContent =
+            "ACCESS DENIED";
+
+        rabbitStatus.style.color =
+            "#ff0033";
+
+        rabbitCode.classList.remove("rabbit-error");
+
+        void rabbitCode.offsetWidth;
+
+        rabbitCode.classList.add("rabbit-error");
+
+        rabbitCode.value = "";
+
+        return;
+    }
+
+
+    startRabbitSequence();
+
+}
+
+
+/* =========================
+   SÉQUENCE FINALE
+========================= */
+
+function startRabbitSequence(){
+
+    rabbitCode.disabled = true;
+
+    rabbitAccess.disabled = true;
+
+    rabbitStatus.textContent =
+        "CONNECTION ESTABLISHED";
+
+    rabbitStatus.style.color =
+        "#00ff88";
+
+    rabbitProgress.style.display =
+        "block";
+
+
+    let progress = 0;
+
+    const messages = [
+
+        "CONNECTION ESTABLISHED",
+
+        "VERIFYING ACCESS KEY...",
+
+        "SEARCHING ARCHIVE...",
+
+        "FOLLOWING THE WHITE RABBIT...",
+
+        "DECODING MEMORY...",
+
+        "OPENING FINAL RECORD...",
+
+        "ARCHIVE UNLOCKING..."
+
+    ];
+
+    let messageIndex = 0;
+
+
+    const timer = setInterval(() => {
+
+        progress += 1;
+
+        rabbitProgressBar.style.width =
+            progress + "%";
+
+        rabbitPercent.textContent =
+            progress + "%";
+
+
+        if(
+            progress === 1 ||
+            progress === 20 ||
+            progress === 40 ||
+            progress === 60 ||
+            progress === 75 ||
+            progress === 90
+        ){
+
+            rabbitProgressText.textContent =
+                messages[messageIndex];
+
+            messageIndex++;
+
+        }
+
+
+        if(progress >= 100){
+
+            clearInterval(timer);
+
+            rabbitProgressText.textContent =
+                "ACCESS GRANTED";
+
+            rabbitPercent.textContent =
+                "100%";
+
+
+            setTimeout(() => {
+
+                revealRabbitArchive();
+
+            },1200);
+
+        }
+
+    },45);
+
+}
+
+
+/* =========================
+   RÉVÉLATION
+========================= */
+
+function revealRabbitArchive(){
+
+    archivePanel.style.display =
+        "none";
+
+    rabbitUnlocked.style.display =
+        "block";
+
+    window.scrollTo({
+
+        top:
+        document.querySelector(
+            ".rabbit-archive"
+        ).offsetTop - 20,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+rabbitAccess.addEventListener(
+    "click",
+    verifyRabbitCode
+);
+
+
+/* =========================
+   ENTRÉE CLAVIER
+========================= */
+
+rabbitCode.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Enter"){
+
+            verifyRabbitCode();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   FORMAT AUTOMATIQUE
+========================= */
+
+rabbitCode.addEventListener(
+    "input",
+    function(){
+
+        rabbitCode.value =
+            rabbitCode.value
+            .toUpperCase()
+            .replace(/\s/g,"");
+
+    }
+);
