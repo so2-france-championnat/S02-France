@@ -431,3 +431,580 @@ background:rgba(255,0,51,0.08);
     font-weight:bold;
     text-shadow:0 0 8px #b84dff, 0 0 16px #b84dff;
 }
+
+/* =====================================================
+   🐇 ARCHIVE DU LAPIN BLANC
+===================================================== */
+
+.rabbit-archive{
+    margin-top:25px;
+    padding:1px;
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        120deg,
+        #008cff,
+        rgba(255,255,255,.35),
+        #ff0033
+    );
+
+    box-shadow:
+        0 0 25px rgba(0,140,255,.15),
+        0 0 25px rgba(255,0,51,.10);
+
+    overflow:hidden;
+}
+
+
+/* HEADER */
+
+.rabbit-archive-header{
+
+    min-height:65px;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 16px;
+
+    background:rgba(5,7,13,.97);
+
+    border-radius:17px 17px 0 0;
+
+    border-bottom:1px solid rgba(0,140,255,.18);
+}
+
+.archive-logo{
+
+    font-size:26px;
+
+    text-shadow:
+        0 0 10px #008cff,
+        0 0 12px #ff0033;
+}
+
+.archive-name{
+
+    font-family:monospace;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.archive-subtitle{
+
+    margin-top:3px;
+
+    color:#55728f;
+
+    font-family:monospace;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+}
+
+.archive-lock{
+
+    margin-left:auto;
+
+    color:#ff0033;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+}
+
+.archive-lock span{
+
+    display:inline-block;
+
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:#ff0033;
+
+    box-shadow:0 0 10px #ff0033;
+
+    margin-right:5px;
+}
+
+
+/* PANEL */
+
+#archivePanel{
+
+    padding:30px 18px;
+
+    text-align:center;
+
+    background:rgba(5,7,13,.97);
+
+    border-radius:0 0 17px 17px;
+}
+
+.archive-number{
+
+    color:white;
+
+    font-family:monospace;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+    text-shadow:
+        0 0 12px #008cff;
+}
+
+.archive-title{
+
+    margin-top:8px;
+
+    color:#5e7b99;
+
+    font-family:monospace;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+}
+
+
+/* INPUT */
+
+.archive-input-box{
+
+    max-width:500px;
+
+    margin:22px auto 12px;
+}
+
+#rabbitCode{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 15px;
+
+    box-sizing:border-box;
+
+    text-align:center;
+
+    background:#02050a;
+
+    color:white;
+
+    border:1px solid rgba(0,140,255,.45);
+
+    border-radius:9px;
+
+    outline:none;
+
+    font-family:monospace;
+
+    font-size:17px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    transition:.25s;
+}
+
+#rabbitCode:focus{
+
+    border-color:#008cff;
+
+    box-shadow:
+        0 0 15px rgba(0,140,255,.35),
+        inset 0 0 15px rgba(0,140,255,.08);
+}
+
+
+/* BUTTON */
+
+#rabbitAccess{
+
+    padding:13px 25px;
+
+    border:0;
+
+    border-radius:9px;
+
+    background:#087cff;
+
+    color:white;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 15px rgba(0,140,255,.4);
+
+    transition:.25s;
+}
+
+#rabbitAccess:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:
+        0 0 20px rgba(0,140,255,.7);
+}
+
+#rabbitAccess:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+
+/* STATUS */
+
+#rabbitStatus{
+
+    margin-top:16px;
+
+    color:#56728f;
+
+    font-family:monospace;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+}
+
+
+/* PROGRESSION */
+
+#rabbitProgress{
+
+    display:none;
+
+    max-width:600px;
+
+    margin:25px auto 0;
+}
+
+.progress-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#6884a1;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    margin-bottom:7px;
+}
+
+.progress-background{
+
+    height:8px;
+
+    padding:1px;
+
+    background:#02050a;
+
+    border:1px solid rgba(0,140,255,.3);
+}
+
+#rabbitProgressBar{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #008cff,
+        white,
+        #ff0033
+    );
+
+    box-shadow:
+        0 0 10px #008cff,
+        0 0 10px #ff0033;
+
+    transition:width .12s linear;
+}
+
+
+/* =====================================================
+   ACCESS GRANTED
+===================================================== */
+
+#rabbitUnlocked{
+
+    display:none;
+
+    padding:30px 18px;
+
+    text-align:center;
+
+    background:rgba(5,7,13,.97);
+
+    border-radius:0 0 17px 17px;
+}
+
+.access-granted{
+
+    width:60px;
+    height:60px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:2px solid #00ff88;
+
+    border-radius:50%;
+
+    color:#00ff88;
+
+    font-size:30px;
+
+    box-shadow:
+        0 0 20px rgba(0,255,136,.35);
+}
+
+.granted-title{
+
+    margin-top:17px;
+
+    color:#00ff88;
+
+    font-family:monospace;
+
+    font-size:24px;
+
+    letter-spacing:4px;
+
+    text-shadow:0 0 12px #00ff88;
+}
+
+.granted-subtitle{
+
+    margin-top:5px;
+
+    color:#5f7c99;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+
+/* IMAGE FINALE */
+
+.rabbit-final{
+
+    max-width:650px;
+
+    margin:25px auto 0;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    background:
+
+    radial-gradient(
+        circle at 20% 50%,
+        rgba(0,140,255,.25),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 50%,
+        rgba(255,0,51,.25),
+        transparent 35%
+    ),
+
+    #03060b;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,.7),
+        0 0 25px rgba(0,140,255,.15);
+}
+
+.rabbit-symbol{
+
+    font-size:50px;
+
+    filter:
+        drop-shadow(0 0 12px white);
+}
+
+.final-archive{
+
+    margin:10px 0 15px;
+
+    color:#6686a6;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+}
+
+.rabbit-final-image{
+
+    width:100%;
+
+    max-width:580px;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 0 20px rgba(0,140,255,.15);
+}
+
+.final-message{
+
+    margin-top:18px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    line-height:1.4;
+}
+
+.final-proof{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:8px 14px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    color:white;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+}
+
+.final-instruction{
+
+    margin-top:18px;
+
+    color:#ff5b78;
+
+    font-family:monospace;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+    letter-spacing:1.5px;
+}
+
+
+/* ERREUR */
+
+.rabbit-error{
+
+    animation:rabbitShake .4s ease;
+
+    border-color:#ff0033 !important;
+
+    box-shadow:
+        0 0 15px rgba(255,0,51,.4) !important;
+}
+
+@keyframes rabbitShake{
+
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    20%{
+        transform:translateX(-7px);
+    }
+
+    40%{
+        transform:translateX(7px);
+    }
+
+    60%{
+        transform:translateX(-5px);
+    }
+
+    80%{
+        transform:translateX(5px);
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .rabbit-archive-header{
+        padding:11px;
+    }
+
+    .archive-name{
+        font-size:11px;
+    }
+
+    .archive-subtitle{
+        font-size:7px;
+    }
+
+    .archive-number{
+        font-size:18px;
+    }
+
+    #rabbitCode{
+        font-size:14px;
+        letter-spacing:2px;
+    }
+
+    .final-message{
+        font-size:18px;
+    }
+
+}
