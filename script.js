@@ -57,7 +57,7 @@ else{
 
 if(i === 1) nbJoueurs = 3; // BussGang
 if(i === 2) nbJoueurs = 4; // Nexus
-if(i === 3) nbJoueurs = 3; // VitriX
+if(i === 3) nbJoueurs = 4; // VitriX
 if(i === 4) nbJoueurs = 4; // Grizzly SDBT
 if(i === 5) nbJoueurs = 4; // Vortex
 if(i === 6) nbJoueurs = 3; // CP-0
@@ -88,7 +88,7 @@ else if(i === 3){
     if(j === 1) playerName = "Bri";
     if(j === 2) playerName = "Loic";
     if(j === 3) playerName = "Nounours";
-    if(j === 4) playerName = "T3P4";
+    if(j === 4) playerName = "Senzy";
 
 }
 else if(i === 4){
