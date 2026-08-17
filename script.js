@@ -5,7 +5,7 @@ let matches = [];
 let openedPlayer = null;
 let openedMatchTeam = null;
 
-const purplePlayers = ["Akra", "Manji", "Nounours"];
+const purplePlayers = ["Akra", "Manji", "Sharko", "Nounours"];
 
 function purpleName(name){
     return purplePlayers.includes(name)
